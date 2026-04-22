@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigado — Seu diagnóstico está a caminho | SVI Doctor</title>
+  <meta name="description" content="Recebemos seu diagnóstico. Nossa equipe entra em contato em até 24h.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23000%22/><text y=%2272%22 x=%2250%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23C9A227%22 font-family=%22serif%22 font-weight=%22700%22>S</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="config.js"></script>
+
+  <!-- Meta Pixel + Lead event -->
+  <script>
+    (function () {
+      var id = (window.SVI_CONFIG || {}).META_PIXEL_ID;
+      if (!id) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/pt_BR/fbevents.js');
+      fbq('init', id); fbq('track','PageView');
+      fbq('track','Lead',{content_category:'diagnostico_qualified', value: 1, currency:'BRL'});
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var id = (window.SVI_CONFIG || {}).GOOGLE_GTAG_ID;
+      if (!id) return;
+      var s=document.createElement('script');s.async=true;
+      s.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};
+      gtag('js', new Date()); gtag('config', id);
+      var label=(window.SVI_CONFIG||{}).GOOGLE_CONVERSION_LABEL;
+      gtag('event','conversion', label ? { send_to: id+'/'+label } : { event_category:'lead', event_label:'diagnostico_ok' });
+    })();
+  </script>
+
+  <style>
+    :root {
+      --gold: #C9A227; --gold-bright: #E6BA3F;
+      --black: #000000; --ink: #0a0a0a; --ink-2: #111; --line: rgba(255,255,255,0.08);
+      --text: #f0ede6; --text-m: #9a9690; --text-mm: #6b6760;
+      --ease: cubic-bezier(.22,.61,.36,1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--text);
+      line-height: 1.6; min-height: 100vh;
+      display: flex; flex-direction: column; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .ty-main {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 60px 24px;
+      background: radial-gradient(ellipse at top, rgba(201,162,39,0.18) 0%, transparent 60%),
+                  linear-gradient(180deg, var(--ink-2) 0%, var(--black) 100%);
+    }
+    .ty-card { max-width: 680px; width: 100%; text-align: center; }
+    .ty-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 700;
+      color: var(--gold); letter-spacing: 4px;
+      margin-bottom: 40px; line-height: 1;
+    }
+    .ty-logo small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; color: var(--text); letter-spacing: 4px; text-transform: uppercase; margin-top: 4px; }
+
+    .checkmark {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: rgba(201,162,39,0.12); border: 1.5px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    @keyframes pop { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    .checkmark svg { color: var(--gold); }
+
+    .ty-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .ty-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px); font-weight: 700;
+      color: var(--text); line-height: 1.12; margin-bottom: 20px;
+      letter-spacing: -0.015em;
+    }
+    .ty-title em { color: var(--gold); font-style: italic; }
+    .ty-sub {
+      font-size: 17px; color: var(--text-m);
+      line-height: 1.75; max-width: 540px; margin: 0 auto 40px;
+    }
+
+    .next-steps {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line); border-radius: 6px;
+      padding: 32px 32px 28px; margin-bottom: 36px; text-align: left;
+    }
+    .ns-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; color: var(--gold);
+      margin-bottom: 20px; text-align: center;
+    }
+    .ns-list { list-style: none; padding: 0; }
+    .ns-list li {
+      padding: 14px 0; display: flex; gap: 14px; align-items: flex-start;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 14px; color: rgba(240,237,230,0.82); line-height: 1.6;
+    }
+    .ns-list li:last-child { border-bottom: none; }
+    .ns-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--gold-bright);
+      flex-shrink: 0; width: 24px;
+    }
+    .ns-list strong { color: var(--text); font-weight: 600; }
+
+    .ty-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 16px 32px; border-radius: 2px;
+      font-size: 13px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; display: inline-flex; align-items: center; gap: 10px;
+      transition: all 0.25s; border: 1px solid;
+    }
+    .btn-primary { background: #25D366; color: #fff; border-color: #25D366; }
+    .btn-primary:hover { background: #1ea956; border-color: #1ea956; transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .urgency {
+      margin-top: 36px; font-size: 13px;
+      color: var(--text-mm); line-height: 1.6;
+    }
+    .urgency strong { color: var(--gold); font-weight: 600; }
+
+    .ty-footer {
+      padding: 24px; text-align: center; font-size: 12px;
+      color: rgba(240,237,230,0.4);
+      background: #050505; border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      .ty-main { padding: 40px 20px; }
+      .next-steps { padding: 24px 20px; }
+      .ty-actions { flex-direction: column; width: 100%; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="ty-main">
+    <div class="ty-card">
+      <div class="ty-logo">SVI<small>Doctor</small></div>
+
+      <div class="checkmark">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <p class="ty-eyebrow">Diagnóstico recebido</p>
+      <h1 class="ty-title">Obrigado, Doutor. Seu <em>diagnóstico está em análise</em>.</h1>
+      <p class="ty-sub">Recebemos suas informações. Nossa equipe vai analisar o seu caso e entrar em contato em até <strong style="color:var(--text);">24 horas</strong> pelo WhatsApp que você informou — para agendarmos a call de diagnóstico.</p>
+
+      <div class="next-steps">
+        <div class="ns-title">O que acontece agora</div>
+        <ul class="ns-list">
+          <li><span class="ns-num">1.</span><span><strong>Análise do seu caso</strong> — especialidade, faturamento, gargalo atual. Em 24h sabemos se o P.U.L.S.O faz sentido para você.</span></li>
+          <li><span class="ns-num">2.</span><span><strong>WhatsApp em até 24h</strong> para alinharmos horário da call (30–45 min).</span></li>
+          <li><span class="ns-num">3.</span><span><strong>Call de diagnóstico</strong> onde analisamos sua presença atual e mostramos o que o P.U.L.S.O mudaria no seu caso específico.</span></li>
+          <li><span class="ns-num">4.</span><span><strong>Sem obrigação de contratar.</strong> Se não for o momento certo ou não fizer sentido, a gente fala isso direto.</span></li>
+        </ul>
+      </div>
+
+      <div class="ty-actions">
+        <a href="https://wa.me/5594991858282?text=Oi!%20Acabei%20de%20preencher%20o%20diagn%C3%B3stico%20no%20site%20e%20gostaria%20de%20antecipar%20a%20conversa." class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.42 3.62 2.42 5.82 0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.31-.02-.48-.02-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.23-.16-.48-.28"/></svg>
+          Falar agora no WhatsApp
+        </a>
+        <a href="https://www.instagram.com/svimedicos" class="btn btn-ghost" target="_blank" rel="noopener">
+          Conhecer no Instagram
+        </a>
+      </div>
+
+      <p class="urgency">Quer agilizar o contato? <strong>Fale com a gente no WhatsApp</strong> e a equipe te responde em minutos em horário comercial.</p>
+    </div>
+  </main>
+
+  <footer class="ty-footer">
+    © 2026 SVI Company · Redenção, PA · Marketing exclusivo para médicos especialistas
+  </footer>
+
+</body>
+</html>
