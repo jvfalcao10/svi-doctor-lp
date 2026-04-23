@@ -13,9 +13,10 @@ window.SVI_CONFIG = {
   GOOGLE_GTAG_ID: '',
   GOOGLE_CONVERSION_LABEL: '',
 
-  // Contact / routing
-  WHATSAPP_NUMBER: '5594991858282',
-  WHATSAPP_TEXT: 'Oi! Acabei de preencher o diagnóstico no site da SVI Doctor e gostaria de conversar.',
+  // Contact / routing — SVI CENTRAL
+  WHATSAPP_NUMBER: '551151951902',
+  WHATSAPP_DISPLAY: '(11) 5195-1902',
+  WHATSAPP_TEXT: 'Oi SVI! Acabei de preencher o diagnóstico no site da SVI Doctor e gostaria de conversar.',
   INSTAGRAM: 'https://www.instagram.com/svimedicos',
 
   // Routing after form
