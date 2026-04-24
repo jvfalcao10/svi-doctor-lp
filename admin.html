@@ -6,7 +6,9 @@
   <title>SVI Doctor Admin · Leads</title>
   <meta name="robots" content="noindex,nofollow">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23000%22/><text y=%2272%22 x=%2250%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23C9A227%22 font-family=%22serif%22 font-weight=%22700%22>S</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +43,8 @@
       background: var(--cream); padding: 48px 40px; border-radius: 8px;
       width: 100%; max-width: 420px; box-shadow: 0 24px 60px rgba(0,0,0,0.35); text-align: center;
     }
-    .login-logo {
-      font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700;
-      color: var(--text-dark); margin-bottom: 4px; letter-spacing: 3px;
-    }
-    .login-logo span { color: var(--gold); }
+    .login-logo { margin-bottom: 4px; display: flex; justify-content: center; }
+    .login-logo img { height: 56px; width: auto; display: block; }
     .login-sub { font-size: 13px; color: var(--text-dark-m); margin-bottom: 32px; letter-spacing: 1.5px; text-transform: uppercase; }
     .login-field { margin-bottom: 14px; text-align: left; }
     .login-field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dark-m); margin-bottom: 6px; }
@@ -74,8 +73,9 @@
       display: flex; justify-content: space-between; align-items: center;
       position: sticky; top: 0; z-index: 50;
     }
-    .topbar-brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: 3px; }
-    .topbar-brand span { color: var(--gold-bright); }
+    .topbar-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+    .topbar-brand img { height: 36px; width: auto; display: block; }
+    .topbar-brand small { color: rgba(245,241,232,0.55); font-size: 11px; letter-spacing: 2.5px; }
     .topbar-actions { display: flex; gap: 10px; align-items: center; }
     .tb-btn {
       font-size: 12px; color: rgba(240,237,230,0.75);
@@ -233,7 +233,7 @@
   <!-- LOGIN -->
   <div id="login" class="login-screen">
     <form class="login-card" id="loginForm" autocomplete="off">
-      <div class="login-logo">SVI <span>Doctor</span></div>
+      <div class="login-logo"><img src="images/logo-dark.png" alt="SVI Doctor" width="79" height="56"></div>
       <p class="login-sub">Painel de leads</p>
 
       <div class="login-field">
@@ -250,7 +250,7 @@
   <!-- DASHBOARD -->
   <div class="app" id="app">
     <header class="topbar">
-      <div class="topbar-brand">SVI <span>Doctor</span> Admin</div>
+      <div class="topbar-brand"><img src="images/logo-gold.png" alt="SVI Doctor"><small>Admin</small></div>
       <div class="topbar-actions">
         <button class="tb-btn" id="refreshBtn">↻ Atualizar</button>
         <button class="tb-btn" id="logoutBtn">Sair</button>

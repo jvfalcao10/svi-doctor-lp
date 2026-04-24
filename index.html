@@ -23,12 +23,21 @@
   <meta property="og:description" content="Método P.U.L.S.O. Presença digital + secretária convertendo + agenda previsível em 90 dias.">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="SVI Doctor">
+  <meta property="og:image" content="https://lp.svidoctor.com.br/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SVI Doctor — Método P.U.L.S.O para médicos especialistas">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SVI Doctor — Marketing para médicos especialistas">
   <meta name="twitter:description" content="Método P.U.L.S.O: agenda previsível em 90 dias. Exclusivo para especialistas que faturam R$80k+/mês.">
+  <meta name="twitter:image" content="https://lp.svidoctor.com.br/images/og-image.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23000%22/><text y=%2272%22 x=%2250%22 font-size=%2660%22 text-anchor=%22middle%22 fill=%22%23C9A227%22 font-family=%22sans-serif%22 font-weight=%22700%22>S</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="images/favicon-512.png">
 
   <script type="application/ld+json">
   {
@@ -156,14 +165,10 @@
       gap: 24px;
     }
     .logo-mark {
-      display: inline-flex; align-items: center; gap: 12px;
+      display: inline-flex; align-items: center;
     }
-    .logo-svg { width: 42px; height: 42px; }
-    .logo-text {
-      font-weight: 700; font-size: 18px; letter-spacing: 0.5px;
-      color: var(--text);
-    }
-    .logo-text span { color: var(--gold); font-weight: 600; }
+    .logo-img { height: 44px; width: auto; display: block; }
+    .logo-img--footer { height: 56px; }
 
     .nav-links { display: flex; gap: 40px; align-items: center; }
     .nav-links > a { font-size: 14px; color: var(--text-2); font-weight: 500; transition: color .2s; }
@@ -1225,18 +1230,8 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-i">
-      <a href="#" class="logo-mark">
-        <svg class="logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="svig" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#E6BA3F"/>
-              <stop offset="100%" stop-color="#8F7118"/>
-            </linearGradient>
-          </defs>
-          <circle cx="24" cy="24" r="22" fill="url(#svig)" opacity="0.2"/>
-          <path d="M14 16 Q14 12 18 12 L30 12 Q34 12 34 16 Q34 20 30 20 L20 20 Q16 20 16 24 Q16 28 20 28 L30 28 Q34 28 34 32 Q34 36 30 36 L14 36" stroke="url(#svig)" stroke-width="3" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span class="logo-text">SVI <span>Doctor</span></span>
+      <a href="#" class="logo-mark" aria-label="SVI Doctor — início">
+        <img src="images/logo-gold.png" alt="SVI Doctor" class="logo-img" width="62" height="44">
       </a>
       <div class="nav-links">
         <a href="#metodo">Método</a>
@@ -1721,12 +1716,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo-mark">
-            <svg class="logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="svig2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E6BA3F"/><stop offset="100%" stop-color="#8F7118"/></linearGradient></defs>
-              <circle cx="24" cy="24" r="22" fill="url(#svig2)" opacity="0.2"/>
-              <path d="M14 16 Q14 12 18 12 L30 12 Q34 12 34 16 Q34 20 30 20 L20 20 Q16 20 16 24 Q16 28 20 28 L30 28 Q34 28 34 32 Q34 36 30 36 L14 36" stroke="url(#svig2)" stroke-width="3" fill="none" stroke-linecap="round"/>
-            </svg>
-            <span class="logo-text">SVI <span>Doctor</span></span>
+            <img src="images/logo-white.png" alt="SVI Doctor" class="logo-img logo-img--footer" width="79" height="56">
           </div>
           <div class="social-row">
             <a href="https://www.instagram.com/svimedicos" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">

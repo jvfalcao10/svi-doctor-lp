@@ -9,7 +9,9 @@
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#000000">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23000%22/><text y=%2272%22 x=%2250%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23C9A227%22 font-family=%22serif%22 font-weight=%22700%22>S</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +26,8 @@
     .topbar { background: var(--black); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
     .topbar a { color: var(--cream); font-size: 13px; font-weight: 500; }
     .topbar a:hover { color: var(--gold-bright); text-decoration: none; }
-    .topbar .brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; letter-spacing: 3px; color: var(--gold); }
-    .topbar .brand small { font-size: 10px; letter-spacing: 3px; color: var(--text); text-transform: uppercase; display: inline-block; margin-left: 4px; }
+    .topbar .brand { display: inline-flex; align-items: center; }
+    .topbar .brand img { height: 36px; width: auto; display: block; }
     .legal { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
     .legal h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; letter-spacing: -0.015em; }
     .legal .updated { font-size: 13px; color: var(--text-dark-m); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
@@ -43,7 +45,7 @@
 <body>
 
   <header class="topbar">
-    <a href="/" class="brand">SVI<small>Doctor</small></a>
+    <a href="/" class="brand" aria-label="SVI Doctor"><img src="images/logo-gold.png" alt="SVI Doctor" width="51" height="36"></a>
     <a href="/">← Voltar ao início</a>
   </header>
 
