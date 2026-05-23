@@ -1,607 +1,848 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Proposta — Baruc Pizzas | SVI Company</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Proposta — Baruc Pizzas | SVI Company</title>
+  <meta name="description" content="Proposta comercial SVI Company: agente de IA no WhatsApp para a Baruc Pizzas. Pedido completo, controle de sabores, reativação automática.">
+  <meta name="theme-color" content="#0A0608">
 
-  :root {
-    --bg: #0D0D0D;
-    --bg2: #161616;
-    --bg3: #1E1E1E;
-    --border: rgba(255,255,255,0.08);
-    --border2: rgba(255,255,255,0.14);
-    --amber: #E8A020;
-    --amber-dim: rgba(232,160,32,0.12);
-    --amber-glow: rgba(232,160,32,0.06);
-    --text: #F0EDE8;
-    --text2: #9A9590;
-    --text3: #5A5652;
-    --green: #3D9970;
-    --green-dim: rgba(61,153,112,0.12);
-    --red: #D45A3A;
-    --red-dim: rgba(212,90,58,0.1);
-  }
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
-  .page { max-width: 860px; margin: 0 auto; padding: 0 2rem 6rem; }
+  <style>
+    :root {
+      --gold: #D4A82C;
+      --gold-bright: #F0C744;
+      --gold-light: #FDEBA8;
+      --gold-dark: #9B7518;
+      --amber: #E89A1C;
+      --copper: #B87333;
 
-  /* HEADER */
-  .header {
-    padding: 5rem 0 4rem;
-    border-bottom: 0.5px solid var(--border);
-  }
-  .header-tag {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .header-tag::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--amber);
-    display: inline-block;
-  }
-  .header h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 1.5rem;
-  }
-  .header h1 span { color: var(--amber); }
-  .header-sub {
-    font-size: 17px;
-    color: var(--text2);
-    max-width: 580px;
-    line-height: 1.65;
-  }
-  .header-meta {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 0.5px solid var(--border);
-    flex-wrap: wrap;
-  }
-  .meta-item { }
-  .meta-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px; }
-  .meta-value { font-size: 14px; color: var(--text2); }
+      --black: #0A0608;
+      --black-2: #120B0F;
+      --ink: #1A1218;
+      --ink-2: #241820;
+      --ink-3: #2E2028;
+      --ink-4: #3A2A34;
 
-  /* SECTIONS */
-  section { padding: 4rem 0; border-bottom: 0.5px solid var(--border); }
-  section:last-child { border-bottom: none; }
+      --off-white: #F7F2E7;
+      --paper: #FBF7EC;
+      --paper-2: #EEE5D1;
 
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--amber);
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-  }
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--text);
-    margin-bottom: 1rem;
-    letter-spacing: -0.015em;
-  }
-  .section-body {
-    color: var(--text2);
-    font-size: 15px;
-    line-height: 1.75;
-    max-width: 640px;
-    margin-bottom: 2rem;
-  }
+      --text: #F7F2E7;
+      --text-2: #DCD1B8;
+      --text-m: #A89B82;
+      --text-mm: #6E634F;
+      --text-dark: #1A1218;
+      --text-dark-m: #524437;
 
-  /* DIAGNOSTIC CARDS */
-  .diag-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 2rem;
-  }
-  .diag-card {
-    background: var(--bg2);
-    padding: 1.5rem;
-  }
-  .diag-number {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--amber);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .diag-desc {
-    font-size: 12px;
-    color: var(--text2);
-    line-height: 1.5;
-  }
+      --green: #4ABE7C;
+      --red: #E07458;
 
-  /* PAIN POINTS */
-  .pain-list { display: flex; flex-direction: column; gap: 1px; margin-top: 2rem; }
-  .pain-item {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .pain-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: var(--red-dim);
-    border: 0.5px solid rgba(212,90,58,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    flex-shrink: 0;
-    color: var(--red);
-  }
-  .pain-content h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
-  .pain-content p { font-size: 13px; color: var(--text2); line-height: 1.5; }
+      --line: rgba(245,241,232,0.08);
+      --line-2: rgba(245,241,232,0.12);
+      --border: rgba(11,4,8,0.08);
 
-  /* SOLUTION FLOWS */
-  .flows-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 2rem; }
-  .flow-card {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    transition: border-color 0.2s;
-  }
-  .flow-card:hover { border-color: var(--border2); }
-  .flow-num {
-    width: 36px;
-    height: 36px;
-    border-radius: 9px;
-    background: var(--amber-dim);
-    border: 0.5px solid rgba(232,160,32,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--amber);
-    flex-shrink: 0;
-  }
-  .flow-content h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
-  .flow-content p { font-size: 13px; color: var(--text2); line-height: 1.6; }
-  .flow-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
-  .tag {
-    font-size: 11px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    background: var(--bg3);
-    border: 0.5px solid var(--border2);
-    color: var(--text2);
-  }
+      --radius-sm: 8px;
+      --radius: 20px;
+      --radius-pill: 999px;
+      --ease: cubic-bezier(.22,.61,.36,1);
+      --max: 1080px;
+    }
 
-  /* CHAT MOCKUP */
-  .chat-wrap {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-top: 2rem;
-  }
-  .chat-header {
-    padding: 1rem 1.25rem;
-    border-bottom: 0.5px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .chat-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--amber-dim);
-    border: 1px solid rgba(232,160,32,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-  }
-  .chat-name { font-size: 14px; font-weight: 500; color: var(--text); }
-  .chat-status { font-size: 11px; color: var(--green); }
-  .chat-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 12px; }
-  .msg { max-width: 78%; display: flex; flex-direction: column; gap: 3px; }
-  .msg.bot { align-self: flex-start; }
-  .msg.user { align-self: flex-end; }
-  .bubble {
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 13px;
-    line-height: 1.55;
-  }
-  .bot .bubble {
-    background: var(--bg3);
-    border: 0.5px solid var(--border);
-    color: var(--text);
-    border-bottom-left-radius: 4px;
-  }
-  .user .bubble {
-    background: var(--amber-dim);
-    border: 0.5px solid rgba(232,160,32,0.2);
-    color: var(--text);
-    border-bottom-right-radius: 4px;
-  }
-  .msg-time { font-size: 10px; color: var(--text3); padding: 0 4px; }
-  .bot .msg-time { align-self: flex-start; }
-  .user .msg-time { align-self: flex-end; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-family: 'DM Sans', sans-serif; font-weight: 600; letter-spacing: -.02em; }
+    ::selection { background: var(--gold); color: var(--black); }
 
-  /* TIMELINE */
-  .timeline { margin-top: 2rem; position: relative; }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 8px;
-    bottom: 8px;
-    width: 1px;
-    background: var(--border);
-  }
-  .tl-item {
-    display: flex;
-    gap: 1.5rem;
-    padding-bottom: 2rem;
-    position: relative;
-  }
-  .tl-item:last-child { padding-bottom: 0; }
-  .tl-dot {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--bg2);
-    border: 0.5px solid var(--border2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--amber);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-  .tl-content { padding-top: 4px; }
-  .tl-week { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px; }
-  .tl-title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
-  .tl-desc { font-size: 13px; color: var(--text2); line-height: 1.6; }
+    /* ============ NAV ============ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,6,8,0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212,168,44,0.1);
+    }
+    .nav-i {
+      max-width: var(--max); margin: 0 auto;
+      padding: 14px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+    }
+    .logo-mark { display: inline-flex; align-items: center; gap: 10px; }
+    .logo-img { height: 38px; width: auto; display: block; }
+    .logo-tag {
+      font-size: 11px; color: var(--text-mm);
+      letter-spacing: 2px; text-transform: uppercase;
+      padding-left: 14px; border-left: 1px solid rgba(245,241,232,0.12);
+    }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 10px 8px 22px; border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, #FFFFFF 0%, #F7EDD0 100%);
+      color: var(--text-dark);
+      font-size: 13px; font-weight: 600;
+      transition: all .25s;
+      box-shadow: 0 8px 20px rgba(212,168,44,0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+      isolation: isolate; position: relative; overflow: hidden;
+    }
+    .btn-gold .arrow {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-bright) 0%, var(--amber) 100%);
+      color: var(--black);
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: transform .25s;
+      box-shadow: 0 4px 12px rgba(232,154,28,0.4);
+    }
+    .btn-gold::before {
+      content: ''; position: absolute; top: 0; left: -120%;
+      width: 60%; height: 100%;
+      background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.55) 50%, transparent 80%);
+      transform: skewX(-18deg);
+      transition: left 0.7s var(--ease);
+      z-index: 1; pointer-events: none;
+    }
+    .btn-gold:hover::before { left: 140%; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(212,168,44,0.45), inset 0 1px 0 rgba(255,255,255,0.9); }
+    .btn-gold:hover .arrow { transform: translateX(3px); }
 
-  /* PRICING */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 2rem;
-  }
-  @media (max-width: 560px) { .pricing-grid { grid-template-columns: 1fr; } }
-  .price-card {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 1.75rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .price-card.featured {
-    border-color: rgba(232,160,32,0.35);
-    background: var(--amber-glow);
-  }
-  .price-badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: var(--amber);
-    color: #000;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-  }
-  .price-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
-  .price-amount {
-    font-family: 'Syne', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--text);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .price-amount span { font-size: 1rem; font-weight: 400; color: var(--text2); }
-  .price-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-top: 10px; }
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      padding: 120px 24px 64px;
+      overflow: hidden;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(232,154,28,0.2), transparent 55%),
+        radial-gradient(800px 600px at 80% 60%, rgba(212,168,44,0.15), transparent 55%),
+        radial-gradient(600px 400px at 50% 100%, rgba(184,115,51,0.14), transparent 60%),
+        linear-gradient(180deg, var(--black) 0%, var(--black-2) 100%);
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(212,168,44,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,168,44,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%);
+      pointer-events: none;
+    }
+    .hero-i {
+      position: relative; z-index: 2;
+      max-width: var(--max); margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, rgba(240,199,68,0.12), rgba(212,168,44,0.06));
+      border: 1px solid rgba(240,199,68,0.25);
+      color: var(--gold-light);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 28px;
+      box-shadow: 0 0 30px rgba(240,199,68,0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .hero-badge .spark {
+      width: 14px; height: 14px; color: var(--gold-bright);
+    }
+    .hero-title {
+      font-size: clamp(40px, 6.5vw, 76px);
+      line-height: 1.02; letter-spacing: -0.035em;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 24px;
+      max-width: 880px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(110deg, var(--gold-light) 10%, var(--gold-bright) 45%, var(--amber) 85%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 1.3vw, 19px);
+      color: var(--text-2); opacity: 0.9;
+      line-height: 1.6; max-width: 660px;
+      margin-bottom: 44px; font-weight: 400;
+    }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-meta {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 22px 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(46,32,40,0.5), rgba(26,18,24,0.6));
+      border: 1px solid rgba(212,168,44,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(240,199,68,0.05);
+    }
+    .hero-meta-item {
+      padding: 0 18px;
+      border-left: 1px solid rgba(245,241,232,0.08);
+    }
+    .hero-meta-item:first-child { border-left: 0; padding-left: 0; }
+    .hero-meta-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-mm); margin-bottom: 6px; }
+    .hero-meta-value { font-size: 14px; color: var(--text); font-weight: 500; }
+    .hero-meta-value em {
+      font-style: normal;
+      background: linear-gradient(120deg, var(--gold-bright), var(--amber));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
 
-  /* REFERENCE PRICE */
-  .ref-price-block {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .ref-left p { font-size: 13px; color: var(--text2); }
-  .ref-left strong { color: var(--text); }
-  .ref-price {
-    text-align: right;
-    flex-shrink: 0;
-  }
-  .ref-market {
-    font-size: 13px;
-    color: var(--text3);
-    text-decoration: line-through;
-  }
-  .ref-svi {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--amber);
-    line-height: 1.1;
-  }
+    /* ============ SECTION SHARED ============ */
+    .section { padding: 80px 32px; }
+    .section-i { max-width: var(--max); margin: 0 auto; }
+    .section--cream { background: var(--paper); color: var(--text-dark); }
+    .section--dark { background: var(--black); }
+    .section-head { text-align: center; margin-bottom: 40px; }
+    .pill-eyebrow {
+      display: inline-block;
+      padding: 8px 22px;
+      border-radius: var(--radius-pill);
+      background: rgba(201,162,39,0.12);
+      color: var(--gold-dark);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 22px;
+      border: 1px solid rgba(201,162,39,0.25);
+    }
+    .section--dark .pill-eyebrow {
+      background: rgba(245,241,232,0.06);
+      color: var(--gold-bright);
+      border-color: rgba(245,241,232,0.1);
+    }
+    .h-section {
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.05; letter-spacing: -0.025em;
+      font-weight: 500;
+      max-width: 820px; margin: 0 auto 16px;
+    }
+    .section--cream .h-section { color: var(--text-dark); }
+    .section--dark .h-section { color: var(--text); }
+    .h-section em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--gold) 0%, var(--gold-bright) 70%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .section--dark .h-section em {
+      background: linear-gradient(110deg, var(--gold-light) 0%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .h-sub {
+      font-size: 16px; max-width: 580px; margin: 0 auto;
+      line-height: 1.65;
+    }
+    .section--cream .h-sub { color: var(--text-dark-m); }
+    .section--dark .h-sub { color: var(--text-m); }
 
-  /* INCLUDES */
-  .includes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin-top: 1.5rem;
-  }
-  .include-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 1rem;
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-  }
-  .check {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--green-dim);
-    border: 0.5px solid rgba(61,153,112,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .check svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
-  .include-text { font-size: 13px; color: var(--text2); line-height: 1.5; }
+    /* ============ DIAGNÓSTICO (cream — numbers as quantified) ============ */
+    .diag-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: rgba(11,4,8,0.08);
+      border-radius: 22px; overflow: hidden;
+      margin-top: 12px;
+      box-shadow: 0 30px 60px -30px rgba(11,4,8,0.18);
+    }
+    .diag-card {
+      background: #fff;
+      padding: 36px 28px;
+      text-align: left;
+    }
+    .diag-num {
+      font-size: 56px; font-weight: 600;
+      line-height: 1; margin-bottom: 12px;
+      letter-spacing: -0.03em;
+      background: linear-gradient(180deg, var(--gold-dark) 0%, var(--gold) 60%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .diag-label {
+      font-size: 13px; color: var(--text-dark-m); line-height: 1.5;
+    }
 
-  /* CTA */
-  .cta-block {
-    text-align: center;
-    padding: 5rem 0;
-    border-top: 0.5px solid var(--border);
-    margin-top: 2rem;
-  }
-  .cta-block h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: -0.015em;
-  }
-  .cta-block p { color: var(--text2); font-size: 15px; margin-bottom: 2rem; }
-  .cta-btn {
-    display: inline-block;
-    background: var(--amber);
-    color: #000;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 14px 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-  }
+    .pain-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+    .pain-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 28px 30px;
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 16px 40px -28px rgba(26,18,24,0.18);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      position: relative; overflow: hidden;
+    }
+    .pain-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 24px; right: 24px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--copper), transparent);
+      opacity: 0.7;
+    }
+    .pain-card:hover { transform: translateY(-3px); box-shadow: 0 28px 60px -30px rgba(212,168,44,0.3); }
+    .pain-ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(224,116,88,0.16), rgba(184,115,51,0.08));
+      border: 1px solid rgba(224,116,88,0.2);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+    .pain-card h4 { font-size: 18px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; letter-spacing: -0.015em; }
+    .pain-card p { font-size: 14px; color: var(--text-dark-m); line-height: 1.65; }
 
-  /* FOOTER */
-  .footer {
-    padding: 2rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 0.5px solid var(--border);
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text3); letter-spacing: 0.08em; text-transform: uppercase; }
-  .footer-info { font-size: 12px; color: var(--text3); }
-</style>
+    /* ============ SOLUÇÃO (dark — flow cards howit-style) ============ */
+    .flows-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-top: 12px;
+    }
+    .flow-card {
+      background: linear-gradient(165deg, var(--ink-2) 0%, var(--ink) 100%);
+      border: 1px solid rgba(212,168,44,0.12);
+      border-radius: 22px;
+      padding: 34px 30px;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      box-shadow: 0 10px 30px -15px rgba(0,0,0,0.5);
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .flow-card::after {
+      content: ''; position: absolute; top: -30%; right: -20%;
+      width: 50%; height: 50%; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,154,28,0.16), transparent 70%);
+      pointer-events: none;
+    }
+    .flow-card:hover { border-color: rgba(240,199,68,0.4); transform: translateY(-4px); box-shadow: 0 24px 50px -20px rgba(212,168,44,0.25); }
+    .flow-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(240,199,68,0.2), rgba(232,154,28,0.1));
+      border: 1px solid rgba(240,199,68,0.3);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: var(--gold-bright);
+      margin-bottom: 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      position: relative; z-index: 1;
+    }
+    .flow-card h3 { font-size: 19px; font-weight: 600; color: var(--text); margin-bottom: 10px; letter-spacing: -0.015em; }
+    .flow-card p { font-size: 14px; color: var(--text-m); line-height: 1.65; flex: 1; }
+    .flow-tags { display: flex; gap: 6px; margin-top: 18px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(245,241,232,0.04);
+      border: 1px solid rgba(245,241,232,0.1);
+      color: var(--text-2);
+      letter-spacing: 0.3px;
+    }
+    .flow-card.featured {
+      grid-column: span 2;
+      background: linear-gradient(145deg, var(--ink) 0%, var(--black-2) 80%, rgba(155,117,24,0.25) 100%);
+      border-color: rgba(212,168,44,0.2);
+      box-shadow: 0 30px 60px -20px rgba(212,168,44,0.15), inset 0 1px 0 rgba(240,199,68,0.08);
+    }
+
+    /* ============ CHAT (dark — banner-style with mockup) ============ */
+    .chat-section { background: var(--black); padding: 80px 32px; }
+    .chat-i {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px; align-items: center;
+      background: linear-gradient(120deg, var(--ink-2) 0%, #221828 50%, rgba(143,113,24,0.25) 100%);
+      border-radius: 36px;
+      padding: 64px 56px;
+      position: relative; overflow: hidden;
+      box-shadow: 0 40px 100px -30px rgba(0,0,0,0.6);
+    }
+    .chat-i::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(600px 300px at 100% 50%, rgba(230,186,63,0.18), transparent 70%);
+      pointer-events: none;
+    }
+    .chat-text { position: relative; z-index: 2; }
+    .chat-text .pill-eyebrow { background: rgba(245,241,232,0.08); color: var(--gold-bright); border-color: rgba(245,241,232,0.1); }
+    .chat-text h2 {
+      font-size: clamp(30px, 3.8vw, 46px);
+      line-height: 1.05; letter-spacing: -0.025em;
+      font-weight: 500; color: var(--text);
+      margin: 18px 0 16px;
+    }
+    .chat-text h2 em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--gold-light) 0%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .chat-text p { color: var(--text-m); font-size: 15px; line-height: 1.65; }
+
+    .chat-wrap {
+      position: relative; z-index: 2;
+      background: #14101A;
+      border: 1px solid rgba(245,241,232,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+    }
+    .chat-header {
+      padding: 14px 18px;
+      background: rgba(20,16,26,0.95);
+      border-bottom: 1px solid rgba(245,241,232,0.06);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .chat-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-bright), var(--amber));
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(212,168,44,0.3);
+    }
+    .chat-name { font-size: 13px; font-weight: 600; color: var(--text); }
+    .chat-status { font-size: 11px; color: var(--green); display: flex; align-items: center; gap: 5px; }
+    .chat-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+    .chat-body {
+      padding: 22px;
+      display: flex; flex-direction: column; gap: 10px;
+      max-height: 520px; overflow-y: auto;
+      background: linear-gradient(180deg, #14101A, #1A141F);
+    }
+    .chat-body::-webkit-scrollbar { width: 4px; }
+    .chat-body::-webkit-scrollbar-thumb { background: rgba(245,241,232,0.1); border-radius: 4px; }
+    .msg { max-width: 80%; display: flex; flex-direction: column; gap: 3px; }
+    .msg.bot { align-self: flex-start; }
+    .msg.user { align-self: flex-end; }
+    .bubble {
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .bot .bubble {
+      background: rgba(245,241,232,0.06);
+      color: var(--text);
+      border-bottom-left-radius: 4px;
+    }
+    .user .bubble {
+      background: linear-gradient(135deg, rgba(240,199,68,0.18), rgba(212,168,44,0.1));
+      border: 1px solid rgba(240,199,68,0.18);
+      color: var(--text);
+      border-bottom-right-radius: 4px;
+    }
+    .msg-time { font-size: 10px; color: var(--text-mm); padding: 0 4px; }
+    .bot .msg-time { align-self: flex-start; }
+    .user .msg-time { align-self: flex-end; }
+
+    /* ============ TIMELINE (cream — howit cream variant) ============ */
+    .timeline-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin-top: 12px;
+    }
+    .tl-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 36px 32px;
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 20px 40px -28px rgba(26,18,24,0.12);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      position: relative; overflow: hidden;
+    }
+    .tl-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 24px; right: 24px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--amber), var(--gold), transparent);
+      opacity: 0.8;
+    }
+    .tl-card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -30px rgba(212,168,44,0.35); }
+    .tl-num {
+      width: 52px; height: 52px; border-radius: 16px;
+      background: linear-gradient(135deg, var(--gold-light), rgba(240,199,68,0.2));
+      color: var(--gold-dark);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 16px rgba(212,168,44,0.2), inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+    .tl-week { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dark-m); margin-bottom: 6px; font-weight: 500; }
+    .tl-title { font-size: 20px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; letter-spacing: -0.015em; }
+    .tl-desc { font-size: 14px; color: var(--text-dark-m); line-height: 1.65; }
+
+    /* ============ INCLUDES (dark — step pattern) ============ */
+    .includes-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 14px; margin-top: 12px;
+    }
+    .include-card {
+      background: linear-gradient(165deg, var(--ink-2) 0%, var(--ink) 100%);
+      border: 1px solid rgba(212,168,44,0.12);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex; align-items: flex-start; gap: 12px;
+      transition: border-color .3s, transform .3s;
+    }
+    .include-card:hover { border-color: rgba(240,199,68,0.35); transform: translateY(-2px); }
+    .check {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(74,190,124,0.2), rgba(74,190,124,0.05));
+      border: 1px solid rgba(74,190,124,0.3);
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .check svg { width: 12px; height: 12px; stroke: var(--green); stroke-width: 2.5; fill: none; }
+    .include-text { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+
+    /* ============ INVESTIMENTO (cream — featured price + costs) ============ */
+    .ref-block {
+      background: #fff;
+      border-radius: 24px;
+      padding: 44px 48px;
+      margin-top: 12px;
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 36px; align-items: center;
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 24px 60px -28px rgba(26,18,24,0.18);
+      position: relative; overflow: hidden;
+    }
+    .ref-block::before {
+      content: ''; position: absolute;
+      top: 0; left: 24px; right: 24px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--amber), var(--gold), transparent);
+    }
+    .ref-block h3 { font-size: 22px; color: var(--text-dark); margin-bottom: 8px; font-weight: 600; letter-spacing: -0.015em; }
+    .ref-block p { font-size: 14px; color: var(--text-dark-m); line-height: 1.65; }
+    .ref-block .strike { text-decoration: line-through; color: var(--text-dark-m); opacity: 0.7; }
+    .ref-price-right { text-align: right; padding-left: 28px; border-left: 1px solid rgba(11,4,8,0.08); }
+    .ref-price-num {
+      font-size: 56px; font-weight: 600;
+      line-height: 1; letter-spacing: -0.03em;
+      background: linear-gradient(180deg, var(--gold-dark) 0%, var(--gold) 60%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .ref-price-note { font-size: 12px; color: var(--text-dark-m); margin-top: 6px; }
+
+    .price-card {
+      background: linear-gradient(145deg, #fff 0%, var(--paper-2) 100%);
+      border: 1px solid rgba(201,162,39,0.3);
+      border-radius: 22px;
+      padding: 32px 36px;
+      margin-top: 18px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 28px; align-items: center;
+      position: relative; overflow: hidden;
+      box-shadow: 0 20px 50px -20px rgba(212,168,44,0.25);
+    }
+    .price-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--text-dark); color: var(--gold-light);
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+    }
+    .price-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dark-m); margin-bottom: 8px; font-weight: 500; }
+    .price-amount {
+      font-size: 38px; font-weight: 600;
+      color: var(--text-dark); line-height: 1; margin-bottom: 8px;
+      letter-spacing: -0.025em;
+    }
+    .price-amount span { font-size: 16px; font-weight: 400; color: var(--text-dark-m); }
+    .price-desc { font-size: 13px; color: var(--text-dark-m); line-height: 1.6; max-width: 420px; }
+    .price-cta { flex-shrink: 0; }
+
+    .costs-table {
+      margin-top: 56px;
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 20px 40px -28px rgba(26,18,24,0.12);
+    }
+    .costs-row {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 24px; align-items: center;
+      padding: 22px 32px;
+      border-bottom: 1px solid rgba(11,4,8,0.06);
+    }
+    .costs-row:last-child { border-bottom: 0; background: var(--paper); }
+    .costs-name { font-size: 15px; color: var(--text-dark); font-weight: 500; margin-bottom: 4px; }
+    .costs-desc { font-size: 13px; color: var(--text-dark-m); line-height: 1.5; }
+    .costs-value { text-align: right; }
+    .costs-amount { font-size: 16px; font-weight: 600; color: var(--gold-dark); letter-spacing: -0.01em; }
+    .costs-amount.free { color: var(--green); }
+    .costs-note { font-size: 11px; color: var(--text-dark-m); margin-top: 2px; }
+    .costs-total .costs-amount { font-size: 22px; }
+
+    .cost-disclaimer {
+      margin-top: 16px;
+      padding: 18px 22px;
+      background: #fff;
+      border-radius: 14px;
+      border-left: 3px solid var(--gold);
+      font-size: 13px; color: var(--text-dark-m); line-height: 1.65;
+    }
+    .cost-disclaimer strong { color: var(--text-dark); }
+
+    /* ============ CTA FINAL ============ */
+    .cta-final {
+      background: var(--black);
+      padding: 90px 32px 80px;
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .cta-final::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -15%);
+      width: 900px; height: 900px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,199,68,0.35) 0%, rgba(232,154,28,0.18) 25%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-final-i { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
+    .cta-final h2 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.05; letter-spacing: -0.03em;
+      font-weight: 500; color: var(--text);
+      margin: 24px 0 18px;
+    }
+    .cta-final h2 em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--gold-light) 0%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .cta-final p {
+      color: var(--text-m); font-size: 17px;
+      max-width: 500px; margin: 0 auto 36px; line-height: 1.6;
+    }
+
+    /* ============ FOOTER ============ */
+    .footer {
+      background: var(--black);
+      padding: 50px 32px 36px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-i {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .footer-brand { font-size: 13px; color: var(--text-mm); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+    .footer-info { font-size: 12px; color: var(--text-mm); }
+    .footer-info a { color: var(--text-m); transition: color .2s; }
+    .footer-info a:hover { color: var(--gold-bright); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 960px) {
+      .hero { padding: 130px 20px 70px; }
+      .hero-title { font-size: 40px; }
+      .hero-meta { grid-template-columns: 1fr 1fr; gap: 0; }
+      .hero-meta-item { border-left: 0; padding: 12px 0; border-top: 1px solid rgba(245,241,232,0.06); }
+      .hero-meta-item:first-child, .hero-meta-item:nth-child(2) { border-top: 0; padding-top: 0; }
+      .hero-meta-item:nth-child(2n) { border-left: 1px solid rgba(245,241,232,0.06); padding-left: 18px; }
+      .hero-meta-item:nth-child(2n+1) { padding-right: 18px; }
+
+      .section { padding: 80px 20px; }
+      .diag-grid { grid-template-columns: 1fr 1fr; }
+      .pain-list { grid-template-columns: 1fr; }
+      .flows-grid { grid-template-columns: 1fr; }
+      .flow-card.featured { grid-column: span 1; }
+      .chat-section { padding: 80px 20px; }
+      .chat-i { grid-template-columns: 1fr; padding: 44px 28px; gap: 36px; }
+      .timeline-grid { grid-template-columns: 1fr; }
+      .includes-grid { grid-template-columns: 1fr 1fr; }
+      .ref-block { grid-template-columns: 1fr; padding: 32px 28px; gap: 24px; text-align: center; }
+      .ref-price-right { padding-left: 0; border-left: 0; padding-top: 24px; border-top: 1px solid rgba(11,4,8,0.08); text-align: center; }
+      .price-card { grid-template-columns: 1fr; padding: 28px; text-align: center; }
+      .costs-row { grid-template-columns: 1fr; text-align: left; }
+      .costs-value { text-align: left; }
+    }
+    @media (max-width: 540px) {
+      .diag-grid { grid-template-columns: 1fr; }
+      .includes-grid { grid-template-columns: 1fr; }
+      .cta-final h2 { font-size: 34px; }
+      .logo-tag { display: none; }
+    }
+  </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-tag">Proposta Comercial · SVI Company</div>
-    <h1>Agente de IA<br>para a <span>Baruc Pizzas</span></h1>
-    <p class="header-sub">Um atendente inteligente no WhatsApp que conversa como humano, guia o pedido do início ao fim e recupera clientes automaticamente — 24 horas por dia.</p>
-    <div class="header-meta">
-      <div class="meta-item">
-        <div class="meta-label">Preparado para</div>
-        <div class="meta-value">Baruc Pizzas</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Data</div>
-        <div class="meta-value">Maio de 2026</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Responsável</div>
-        <div class="meta-value">João Falcão · SVI Company</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Entrega estimada</div>
-        <div class="meta-value">21 dias</div>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-i">
+      <a href="https://svicompany.com.br" class="logo-mark" aria-label="SVI Company">
+        <img src="images/logo-gold.png" alt="SVI Company" class="logo-img" width="54" height="38">
+        <span class="logo-tag">Proposta · Baruc Pizzas</span>
+      </a>
+      <div class="nav-actions">
+        <a href="https://wa.me/5594991049987" class="btn-gold">
+          Falar com a SVI
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
       </div>
     </div>
-  </header>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-i">
+      <div class="hero-badge">
+        <svg class="spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+        </svg>
+        Proposta comercial · SVI Company
+      </div>
+
+      <h1 class="hero-title">
+        Agente de IA para a<br><span class="highlight">Baruc Pizzas.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Um atendente inteligente no WhatsApp que conversa como humano, guia o pedido do início ao fim e recupera clientes automaticamente. <strong>Vinte e quatro horas por dia, sem perder pedido por demora.</strong>
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Preparado para</div>
+          <div class="hero-meta-value">Baruc Pizzas</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Data</div>
+          <div class="hero-meta-value">Maio de 2026</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Responsável</div>
+          <div class="hero-meta-value">João Falcão</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-label">Entrega</div>
+          <div class="hero-meta-value"><em>21 dias</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- DIAGNÓSTICO -->
-  <section>
-    <div class="section-label">Diagnóstico</div>
-    <h2 class="section-title">O que identificamos na operação de vocês</h2>
-    <p class="section-body">Com base nas respostas do formulário de diagnóstico, mapeamos a operação atual e os principais pontos de perda de venda.</p>
+  <section class="section section--cream reveal">
+    <div class="section-i">
+      <div class="section-head">
+        <div class="pill-eyebrow">Diagnóstico</div>
+        <h2 class="h-section">O que identificamos<br>na <em>operação de vocês.</em></h2>
+        <p class="h-sub">Com base nas respostas do formulário, mapeamos a operação atual e os principais pontos de perda de venda.</p>
+      </div>
 
-    <div class="diag-grid">
-      <div class="diag-card">
-        <div class="diag-number">50</div>
-        <div class="diag-desc">pedidos/dia nos dias úteis</div>
-      </div>
-      <div class="diag-card">
-        <div class="diag-number">200</div>
-        <div class="diag-desc">pedidos só no fim de semana</div>
-      </div>
-      <div class="diag-card">
-        <div class="diag-number">1</div>
-        <div class="diag-desc">número de WhatsApp para tudo isso</div>
-      </div>
-      <div class="diag-card">
-        <div class="diag-number">4+</div>
-        <div class="diag-desc">canais simultâneos (WhatsApp, iFood, telefone, balcão)</div>
-      </div>
-    </div>
-
-    <div class="pain-list" style="margin-top: 1.5rem;">
-      <div class="pain-item">
-        <div class="pain-icon">✕</div>
-        <div class="pain-content">
-          <h4>Bot atual é robótico e repetitivo</h4>
-          <p>O sistema atual envia menus numéricos e repete perguntas desnecessárias. O cliente perde a paciência e abandona o pedido antes de finalizar.</p>
+      <div class="diag-grid">
+        <div class="diag-card">
+          <div class="diag-num">50</div>
+          <div class="diag-label">pedidos por dia nos dias úteis</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-num">200</div>
+          <div class="diag-label">pedidos só no fim de semana</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-num">1</div>
+          <div class="diag-label">número de WhatsApp para tudo isso</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-num">4+</div>
+          <div class="diag-label">canais simultâneos (WhatsApp, iFood, telefone, balcão)</div>
         </div>
       </div>
-      <div class="pain-item">
-        <div class="pain-icon">✕</div>
-        <div class="pain-content">
+
+      <div class="pain-list">
+        <div class="pain-card">
+          <div class="pain-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <h4>Bot atual é robótico</h4>
+          <p>O sistema envia menus numéricos e repete perguntas. O cliente perde a paciência e abandona o pedido antes de finalizar.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
           <h4>Sabores esgotados travam o pedido</h4>
-          <p>Quando um sabor é retirado do sistema, o cliente fica sem conseguir concluir o pedido — sem explicação, sem alternativa. Venda perdida.</p>
+          <p>Quando um sabor é retirado do sistema, o cliente fica sem conseguir concluir o pedido. Sem explicação, sem alternativa. Venda perdida.</p>
         </div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">✕</div>
-        <div class="pain-content">
+        <div class="pain-card">
+          <div class="pain-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
           <h4>Clientes somem sem retornar</h4>
-          <p>Não existe nenhum mecanismo de reativação. Clientes que pararam de pedir somem sem nenhuma abordagem automática de recuperação.</p>
+          <p>Não existe mecanismo de reativação. Quem parou de pedir some sem nenhuma abordagem automática de recuperação.</p>
         </div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">✕</div>
-        <div class="pain-content">
+        <div class="pain-card">
+          <div class="pain-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
           <h4>Nenhuma pesquisa pós-entrega</h4>
-          <p>Sem feedback sistemático, problemas de qualidade e entrega não são capturados. A percepção do cliente fica invisível para a gestão.</p>
+          <p>Sem feedback sistemático, problemas de qualidade e entrega não são capturados. A percepção do cliente fica invisível.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SOLUÇÃO -->
-  <section>
-    <div class="section-label">A Solução</div>
-    <h2 class="section-title">Um agente que conversa, vende e fideliza</h2>
-    <p class="section-body">Construímos um agente de inteligência artificial integrado ao seu WhatsApp existente. Ele entende mensagens em linguagem natural — não precisa de menu numérico — e guia o cliente passo a passo até o pedido impresso na sua cozinha.</p>
+  <section class="section section--dark reveal">
+    <div class="section-i">
+      <div class="section-head">
+        <div class="pill-eyebrow">A solução</div>
+        <h2 class="h-section">Um agente que conversa,<br>vende e <em>fideliza.</em></h2>
+        <p class="h-sub">Construímos um agente de inteligência artificial integrado ao WhatsApp existente. Entende mensagens em linguagem natural, sem menu numérico, e guia o cliente até o pedido impresso na sua cozinha.</p>
+      </div>
 
-    <div class="flows-grid">
-      <div class="flow-card">
-        <div class="flow-num">01</div>
-        <div class="flow-content">
-          <h3>Pedido completo — passo a passo guiado</h3>
-          <p>O agente conduz o cliente: tamanho → quantidade de sabores → sabores disponíveis → borda → bebida → endereço → forma de pagamento → confirmação → envio automático para sua impressora térmica.</p>
+      <div class="flows-grid">
+        <div class="flow-card">
+          <div class="flow-num">01</div>
+          <h3>Pedido completo guiado</h3>
+          <p>O agente conduz o cliente: tamanho, quantidade de sabores, sabores disponíveis, borda, bebida, endereço, forma de pagamento, confirmação e envio automático para sua impressora térmica.</p>
           <div class="flow-tags">
             <span class="tag">Linguagem natural</span>
             <span class="tag">Impressão automática</span>
             <span class="tag">Cardápio dinâmico</span>
           </div>
         </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-num">02</div>
-        <div class="flow-content">
-          <h3>Dúvidas — respostas instantâneas</h3>
+        <div class="flow-card">
+          <div class="flow-num">02</div>
+          <h3>Dúvidas com resposta instantânea</h3>
           <p>Horário de funcionamento, área de entrega, tempo estimado, formas de pagamento aceitas, ingredientes de cada sabor. O agente responde tudo sem depender de atendente humano.</p>
           <div class="flow-tags">
             <span class="tag">24/7</span>
             <span class="tag">Sem atendente humano</span>
           </div>
         </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-num">03</div>
-        <div class="flow-content">
-          <h3>Sabores esgotados — atualização em tempo real</h3>
-          <p>Você avisa pelo WhatsApp (ou painel) quais sabores acabaram. O agente remove automaticamente da lista — o cliente nunca vê um sabor indisponível e não trava no pedido.</p>
+        <div class="flow-card">
+          <div class="flow-num">03</div>
+          <h3>Sabores esgotados em tempo real</h3>
+          <p>Vocês avisam pelo WhatsApp (ou painel) quais sabores acabaram. O agente remove automaticamente da lista. O cliente nunca vê um sabor indisponível e não trava no pedido.</p>
           <div class="flow-tags">
             <span class="tag">Atualização instantânea</span>
             <span class="tag">Sem pedido travado</span>
           </div>
         </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-num">04</div>
-        <div class="flow-content">
-          <h3>Pesquisa pós-entrega — feedback automático</h3>
-          <p>Entre 40 a 60 minutos após o pedido confirmado, o agente dispara uma mensagem perguntando sobre a experiência. As respostas são registradas para acompanhamento.</p>
+        <div class="flow-card">
+          <div class="flow-num">04</div>
+          <h3>Pesquisa pós-entrega automática</h3>
+          <p>Entre 40 e 60 minutos após o pedido confirmado, o agente dispara mensagem perguntando sobre a experiência. As respostas ficam registradas para acompanhamento.</p>
           <div class="flow-tags">
             <span class="tag">Disparo automático</span>
             <span class="tag">Registro de feedback</span>
           </div>
         </div>
-      </div>
-      <div class="flow-card">
-        <div class="flow-num">05</div>
-        <div class="flow-content">
-          <h3>Reativação de clientes sumidos</h3>
-          <p>Clientes que não pedem há X dias recebem uma mensagem personalizada com uma oferta ou lembrete. Recupera venda que seria perdida sem nenhuma ação manual da sua parte.</p>
+        <div class="flow-card featured">
+          <div class="flow-num">05</div>
+          <h3>Reativação de clientes inativos</h3>
+          <p>Clientes que não pedem há X dias recebem mensagem personalizada com oferta ou lembrete. Recupera venda que seria perdida sem nenhuma ação manual da sua parte.</p>
           <div class="flow-tags">
             <span class="tag">Automático</span>
             <span class="tag">Personalizado</span>
@@ -612,246 +853,240 @@
     </div>
   </section>
 
-  <!-- SIMULAÇÃO DO AGENTE -->
-  <section>
-    <div class="section-label">Como funciona na prática</div>
-    <h2 class="section-title">Uma conversa real com o agente</h2>
-    <p class="section-body">É isso que o seu cliente vai ver no WhatsApp. Sem menu numérico, sem travamento, sem robô óbvio.</p>
-
-    <div class="chat-wrap">
-      <div class="chat-header">
-        <div class="chat-avatar">🍕</div>
-        <div>
-          <div class="chat-name">Baruc Pizzas</div>
-          <div class="chat-status">● online agora</div>
-        </div>
+  <!-- CHAT MOCKUP -->
+  <section class="chat-section reveal">
+    <div class="chat-i">
+      <div class="chat-text">
+        <div class="pill-eyebrow">Como funciona na prática</div>
+        <h2>Uma conversa real<br>com o <em>agente.</em></h2>
+        <p>É isso que o seu cliente vai ver no WhatsApp. Sem menu numérico, sem travamento, sem robô óbvio. Linguagem natural, do início ao fim.</p>
       </div>
-      <div class="chat-body">
-        <div class="msg user">
-          <div class="bubble">Oi, boa noite! Quero pedir uma pizza</div>
-          <div class="msg-time">19:42</div>
+      <div class="chat-wrap">
+        <div class="chat-header">
+          <div class="chat-avatar">🍕</div>
+          <div>
+            <div class="chat-name">Baruc Pizzas</div>
+            <div class="chat-status">online agora</div>
+          </div>
         </div>
-        <div class="msg bot">
-          <div class="bubble">Boa noite! 🍕 Seja bem-vindo à Baruc Pizzas! Fico feliz em te atender.<br><br>Vamos montar sua pizza? Qual tamanho você prefere?<br>• <strong>Grande</strong> (8 fatias)<br>• <strong>Família</strong> (12 fatias)</div>
-          <div class="msg-time">19:42</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">Grande</div>
-          <div class="msg-time">19:43</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Ótima escolha! 👍 Na pizza grande você pode escolher até <strong>2 sabores</strong>.<br><br>Quantos sabores você quer hoje? 1 ou 2?</div>
-          <div class="msg-time">19:43</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">2 sabores, frango com catupiry e portuguesa</div>
-          <div class="msg-time">19:43</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Anotei! Meia <strong>Frango com Catupiry</strong> e meia <strong>Portuguesa</strong> 🔥<br><br>Qual borda você prefere?<br>• <strong>Sem borda</strong><br>• <strong>Cheddar</strong> (+R$5)<br>• <strong>Catupiry</strong> (+R$5)</div>
-          <div class="msg-time">19:44</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">Catupiry</div>
-          <div class="msg-time">19:44</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Perfeito! Vou adicionar a borda de catupiry. 🧀<br><br>Vai querer adicionar alguma bebida? Temos Coca-Cola, Guaraná Antarctica e água.</div>
-          <div class="msg-time">19:44</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">Coca 2L</div>
-          <div class="msg-time">19:45</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Anotado! Qual o endereço de entrega?</div>
-          <div class="msg-time">19:45</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">Rua das Flores 342, bairro Centro</div>
-          <div class="msg-time">19:46</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Entregamos no Centro sim! ✅<br><br>Resumo do seu pedido:<br>🍕 Pizza Grande — Frango c/ Catupiry + Portuguesa<br>🧀 Borda Catupiry<br>🥤 Coca-Cola 2L<br>📍 Rua das Flores 342, Centro<br><br><strong>Total: R$62,00</strong><br><br>Pagamento na entrega (Pix, cartão ou dinheiro). Tudo certo?</div>
-          <div class="msg-time">19:46</div>
-        </div>
-        <div class="msg user">
-          <div class="bubble">Sim, confirma!</div>
-          <div class="msg-time">19:46</div>
-        </div>
-        <div class="msg bot">
-          <div class="bubble">Pedido confirmado! 🎉 Tempo estimado de entrega: 40 a 50 minutos. Qualquer dúvida é só chamar aqui!</div>
-          <div class="msg-time">19:46</div>
+        <div class="chat-body">
+          <div class="msg user"><div class="bubble">Oi, boa noite! Quero pedir uma pizza</div><div class="msg-time">19:42</div></div>
+          <div class="msg bot"><div class="bubble">Boa noite! Seja bem-vindo à Baruc Pizzas. Vamos montar sua pizza? Qual tamanho prefere?<br>• <strong>Grande</strong> (8 fatias)<br>• <strong>Família</strong> (12 fatias)</div><div class="msg-time">19:42</div></div>
+          <div class="msg user"><div class="bubble">Grande</div><div class="msg-time">19:43</div></div>
+          <div class="msg bot"><div class="bubble">Ótima escolha. Na pizza grande você pode escolher até <strong>2 sabores</strong>. Quantos quer hoje?</div><div class="msg-time">19:43</div></div>
+          <div class="msg user"><div class="bubble">2 sabores, frango com catupiry e portuguesa</div><div class="msg-time">19:43</div></div>
+          <div class="msg bot"><div class="bubble">Anotei: meia <strong>Frango com Catupiry</strong> e meia <strong>Portuguesa</strong>. Qual borda prefere?<br>• Sem borda<br>• Cheddar (+R$5)<br>• Catupiry (+R$5)</div><div class="msg-time">19:44</div></div>
+          <div class="msg user"><div class="bubble">Catupiry</div><div class="msg-time">19:44</div></div>
+          <div class="msg bot"><div class="bubble">Perfeito, adicionei a borda. Vai querer alguma bebida? Temos Coca-Cola, Guaraná Antarctica e água.</div><div class="msg-time">19:44</div></div>
+          <div class="msg user"><div class="bubble">Coca 2L</div><div class="msg-time">19:45</div></div>
+          <div class="msg bot"><div class="bubble">Anotado. Qual o endereço de entrega?</div><div class="msg-time">19:45</div></div>
+          <div class="msg user"><div class="bubble">Rua das Flores 342, bairro Centro</div><div class="msg-time">19:46</div></div>
+          <div class="msg bot"><div class="bubble">Entregamos no Centro sim.<br><br>Resumo do pedido:<br>Pizza Grande, Frango c/ Catupiry + Portuguesa<br>Borda Catupiry<br>Coca-Cola 2L<br>Rua das Flores 342, Centro<br><br><strong>Total: R$62,00</strong><br><br>Pagamento na entrega (Pix, cartão ou dinheiro). Confirma?</div><div class="msg-time">19:46</div></div>
+          <div class="msg user"><div class="bubble">Sim, confirma!</div><div class="msg-time">19:46</div></div>
+          <div class="msg bot"><div class="bubble">Pedido confirmado. Tempo estimado: 40 a 50 minutos. Qualquer dúvida é só chamar aqui.</div><div class="msg-time">19:46</div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CRONOGRAMA -->
-  <section>
-    <div class="section-label">Cronograma</div>
-    <h2 class="section-title">Entrega em 21 dias</h2>
-    <p class="section-body">Do início do projeto ao agente funcionando no seu WhatsApp, em três semanas.</p>
+  <section class="section section--cream reveal">
+    <div class="section-i">
+      <div class="section-head">
+        <div class="pill-eyebrow">Cronograma</div>
+        <h2 class="h-section">Entrega em <em>21 dias.</em></h2>
+        <p class="h-sub">Do início do projeto ao agente funcionando no WhatsApp de vocês, em três semanas.</p>
+      </div>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot">1</div>
-        <div class="tl-content">
+      <div class="timeline-grid">
+        <div class="tl-card">
+          <div class="tl-num">1</div>
           <div class="tl-week">Semana 1</div>
           <div class="tl-title">Setup e cardápio</div>
           <div class="tl-desc">Configuração da infraestrutura técnica, cadastro completo do cardápio (sabores, tamanhos, bordas, bebidas, preços) e definição da área de entrega por bairro.</div>
         </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">2</div>
-        <div class="tl-content">
+        <div class="tl-card">
+          <div class="tl-num">2</div>
           <div class="tl-week">Semana 2</div>
           <div class="tl-title">Desenvolvimento dos 5 fluxos</div>
-          <div class="tl-desc">Construção do agente conversacional, fluxo de pedido completo, módulo de dúvidas, controle de sabores esgotados, pesquisa pós-entrega e reativação de clientes. Testes internos.</div>
+          <div class="tl-desc">Construção do agente conversacional, fluxo de pedido completo, dúvidas, controle de sabores esgotados, pesquisa pós-entrega e reativação. Testes internos.</div>
         </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">3</div>
-        <div class="tl-content">
+        <div class="tl-card">
+          <div class="tl-num">3</div>
           <div class="tl-week">Semana 3</div>
           <div class="tl-title">Testes reais + go live</div>
-          <div class="tl-desc">Testes ao vivo com situações reais (sabores esgotados, endereços fora da área, pedidos complexos). Ajustes finos baseados no feedback. Ativação definitiva no seu número de WhatsApp.</div>
+          <div class="tl-desc">Testes ao vivo com situações reais (sabores esgotados, endereços fora da área, pedidos complexos). Ajustes finos e ativação definitiva no número de WhatsApp.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- O QUE ESTÁ INCLUÍDO -->
-  <section>
-    <div class="section-label">Entregáveis</div>
-    <h2 class="section-title">O que está incluído</h2>
-    <div class="includes-grid">
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Agente IA conversacional no seu WhatsApp</div>
+  <!-- ENTREGÁVEIS -->
+  <section class="section section--dark reveal">
+    <div class="section-i">
+      <div class="section-head">
+        <div class="pill-eyebrow">Entregáveis</div>
+        <h2 class="h-section">O que está <em>incluído.</em></h2>
       </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">5 fluxos configurados e testados</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Integração com impressora térmica existente</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Cardápio dinâmico — você atualiza pelo celular</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Controle de sabores esgotados em tempo real</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Pesquisa pós-entrega automática</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">Reativação automática de clientes inativos</div>
-      </div>
-      <div class="include-item">
-        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-        <div class="include-text">30 dias de suporte técnico pós-entrega</div>
+
+      <div class="includes-grid">
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Agente IA conversacional no seu WhatsApp</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">5 fluxos configurados e testados</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Integração com impressora térmica existente</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Cardápio dinâmico, atualizado pelo celular</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Controle de sabores esgotados em tempo real</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Pesquisa pós-entrega automática</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">Reativação automática de clientes inativos</div>
+        </div>
+        <div class="include-card">
+          <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <div class="include-text">30 dias de suporte técnico pós-entrega</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- INVESTIMENTO -->
-  <section>
-    <div class="section-label">Investimento</div>
-    <h2 class="section-title">Condições especiais de lançamento</h2>
-    <p class="section-body">Este projeto tem valor de mercado de R$12.000. Para fechar agora, oferecemos condições especiais.</p>
-
-    <div class="ref-price-block">
-      <div class="ref-left">
-        <p><strong>Projeto completo:</strong> agente IA + 5 fluxos + integração impressora + 30 dias de suporte</p>
-        <p style="margin-top:4px;">Valor de referência de mercado: <span style="text-decoration: line-through; color: var(--text3);">R$12.000</span></p>
+  <section class="section section--cream reveal">
+    <div class="section-i">
+      <div class="section-head">
+        <div class="pill-eyebrow">Investimento</div>
+        <h2 class="h-section">Condições especiais<br>de <em>lançamento.</em></h2>
+        <p class="h-sub">Projeto com valor de mercado de R$12.000. Para fechar agora, oferecemos condições especiais.</p>
       </div>
-      <div class="ref-price">
-        <div class="ref-svi">R$ 5.000</div>
-        <div style="font-size:12px; color: var(--text3); margin-top:2px;">pagamento único ou parcelado</div>
-      </div>
-    </div>
 
-    <div class="pricing-grid" style="grid-template-columns: 1fr;">
-      <div class="price-card featured">
+      <div class="ref-block">
+        <div>
+          <h3>Projeto completo</h3>
+          <p>Agente IA + 5 fluxos + integração com impressora + 30 dias de suporte técnico. Setup único, sem mensalidade recorrente para a SVI.</p>
+          <p style="margin-top: 10px;">Valor de referência de mercado: <span class="strike">R$ 12.000</span></p>
+        </div>
+        <div class="ref-price-right">
+          <div class="ref-price-num">R$ 5.000</div>
+          <div class="ref-price-note">pagamento único ou parcelado</div>
+        </div>
+      </div>
+
+      <div class="price-card">
         <div class="price-badge">Condição especial</div>
-        <div class="price-label">Parcelamento mensal</div>
-        <div class="price-amount">R$1.000 <span>/ mês × 5</span></div>
-        <div class="price-desc">5 parcelas mensais de R$1.000. Primeira parcela na assinatura do contrato, demais no mesmo dia dos meses seguintes. Total: R$5.000 (vs R$12.000 valor de mercado).</div>
-      </div>
-    </div>
-
-    <div style="margin-top: 2.5rem;">
-      <div class="section-label">Custos operacionais mensais</div>
-      <p class="section-body" style="margin-bottom: 1.5rem;">Além do valor do projeto, o agente tem um custo mensal de operação. Transparência total sobre o que você vai pagar para manter o sistema no ar.</p>
-
-      <div style="display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden;">
-        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <div>
-            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">API de inteligência artificial</div>
-            <div style="font-size: 12px; color: var(--text2);">Motor de linguagem que faz o agente entender e responder naturalmente</div>
-          </div>
-          <div style="text-align: right; flex-shrink: 0;">
-            <div style="font-size: 15px; font-weight: 500; color: var(--amber);">~R$15–20/mês</div>
-            <div style="font-size: 11px; color: var(--text3);">estimativa para seu volume atual</div>
-          </div>
+        <div>
+          <div class="price-label">Parcelamento mensal</div>
+          <div class="price-amount">R$ 1.000 <span>/ mês × 5</span></div>
+          <div class="price-desc">Cinco parcelas mensais de R$ 1.000. Primeira na assinatura do contrato, demais no mesmo dia dos meses seguintes. Total: R$ 5.000 (vs R$ 12.000 de mercado).</div>
         </div>
-        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <div>
-            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">Servidor (VPS)</div>
-            <div style="font-size: 12px; color: var(--text2);">Infraestrutura onde o agente roda — utilizamos o servidor da SVI no início</div>
-          </div>
-          <div style="text-align: right; flex-shrink: 0;">
-            <div style="font-size: 15px; font-weight: 500; color: var(--green);">R$0/mês</div>
-            <div style="font-size: 11px; color: var(--text3);">incluso — se volume crescer, migramos</div>
-          </div>
-        </div>
-        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <div>
-            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">WhatsApp, automações, cardápio</div>
-            <div style="font-size: 12px; color: var(--text2);">Conexão WhatsApp, fluxos N8N, memória de conversa, planilha de cardápio</div>
-          </div>
-          <div style="text-align: right; flex-shrink: 0;">
-            <div style="font-size: 15px; font-weight: 500; color: var(--green);">R$0/mês</div>
-            <div style="font-size: 11px; color: var(--text3);">tudo self-hosted no servidor</div>
-          </div>
-        </div>
-        <div style="background: var(--bg3); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; border-top: 0.5px solid var(--border2);">
-          <div style="font-size: 14px; font-weight: 500; color: var(--text);">Total estimado para manter o agente no ar</div>
-          <div style="text-align: right; flex-shrink: 0;">
-            <div style="font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--amber);">~R$15–20/mês</div>
-            <div style="font-size: 11px; color: var(--text3);">menos que uma pizza por semana</div>
-          </div>
+        <div class="price-cta">
+          <a href="https://wa.me/5594991049987" class="btn-gold">
+            Quero fechar
+            <span class="arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
         </div>
       </div>
 
-      <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: var(--bg2); border: 0.5px solid var(--border); border-radius: 10px;">
-        <div style="font-size: 12px; color: var(--text2); line-height: 1.6;">
-          <strong style="color: var(--text);">Nota:</strong> Se o volume de pedidos crescer significativamente (acima de 5.000/mês), o custo da API pode chegar a R$30–50/mês. Acompanhamos juntos e avisamos antes de qualquer mudança relevante. Servidor próprio (caso necessário) custa entre R$50–80/mês na Hostinger.
+      <div style="margin-top: 64px;">
+        <div class="section-head" style="margin-bottom: 32px;">
+          <div class="pill-eyebrow">Custos operacionais mensais</div>
+          <h2 class="h-section" style="font-size: clamp(28px, 3.5vw, 40px);">Transparência total<br>sobre <em>o que vocês pagam.</em></h2>
+          <p class="h-sub">Além do valor do projeto, o agente tem custo mensal de operação. Esses valores ficam direto com os fornecedores.</p>
+        </div>
+
+        <div class="costs-table">
+          <div class="costs-row">
+            <div>
+              <div class="costs-name">API de inteligência artificial</div>
+              <div class="costs-desc">Motor de linguagem que faz o agente entender e responder naturalmente.</div>
+            </div>
+            <div class="costs-value">
+              <div class="costs-amount">~R$ 15–20/mês</div>
+              <div class="costs-note">estimativa para volume atual</div>
+            </div>
+          </div>
+          <div class="costs-row">
+            <div>
+              <div class="costs-name">Servidor (VPS)</div>
+              <div class="costs-desc">Infraestrutura onde o agente roda. Utilizamos o servidor da SVI no início.</div>
+            </div>
+            <div class="costs-value">
+              <div class="costs-amount free">R$ 0/mês</div>
+              <div class="costs-note">incluso enquanto couber</div>
+            </div>
+          </div>
+          <div class="costs-row">
+            <div>
+              <div class="costs-name">WhatsApp, automações, cardápio</div>
+              <div class="costs-desc">Conexão WhatsApp, fluxos N8N, memória de conversa, planilha de cardápio.</div>
+            </div>
+            <div class="costs-value">
+              <div class="costs-amount free">R$ 0/mês</div>
+              <div class="costs-note">tudo self-hosted</div>
+            </div>
+          </div>
+          <div class="costs-row costs-total">
+            <div class="costs-name">Total estimado para manter o agente no ar</div>
+            <div class="costs-value">
+              <div class="costs-amount">~R$ 15–20/mês</div>
+              <div class="costs-note">menos que uma pizza por semana</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cost-disclaimer">
+          <strong>Nota:</strong> Se o volume crescer acima de 5.000 pedidos/mês, o custo da API pode subir para R$ 30–50/mês. Acompanhamos juntos e avisamos antes de qualquer mudança. Servidor próprio (se necessário) custa entre R$ 50–80/mês na Hostinger.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="cta-block">
-    <h2>Pronto para ter um atendente<br>que nunca dorme?</h2>
-    <p>Aprovando essa proposta, começamos na semana que vem.</p>
-    <a class="cta-btn" href="https://wa.me/5594991049987">Quero fechar agora</a>
-  </div>
+  <!-- CTA FINAL -->
+  <section class="cta-final reveal">
+    <div class="cta-final-i">
+      <div class="pill-eyebrow" style="background: rgba(245,241,232,0.06); color: var(--gold-bright); border-color: rgba(245,241,232,0.1);">Próximo passo</div>
+      <h2>Pronto para ter um atendente<br>que <em>nunca dorme?</em></h2>
+      <p>Aprovando essa proposta, começamos na semana seguinte. Em 21 dias o agente está no ar atendendo seus clientes.</p>
+      <a href="https://wa.me/5594991049987" class="btn-gold">
+        Fechar agora
+        <span class="arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-brand">SVI Company</div>
-    <div class="footer-info">João Falcão · Redenção, PA · contato@svi.company</div>
+    <div class="footer-i">
+      <div class="footer-brand">SVI Company</div>
+      <div class="footer-info">João Falcão · Redenção, PA · <a href="mailto:svicompanyy@gmail.com">svicompanyy@gmail.com</a></div>
+    </div>
   </footer>
 
-</div>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
 </body>
 </html>
