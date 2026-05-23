@@ -549,6 +549,103 @@
     .fs-4 { bottom: 4%; right: 6%; animation-delay: 1s; }
     @keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
+    /* ============ CASES ============ */
+    .cases {
+      background: var(--paper);
+      padding: 100px 32px;
+      color: var(--text-dark);
+    }
+    .cases-i { max-width: var(--max); margin: 0 auto; }
+    .cases-head { text-align: center; margin-bottom: 48px; }
+    .cases-head h2 { font-size: clamp(34px, 4.2vw, 56px); color: var(--text-dark); line-height: 1.05; letter-spacing: -0.025em; font-weight: 500; max-width: 720px; margin: 16px auto 0; }
+    .cases-head h2 em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--gold) 0%, var(--gold-bright) 70%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .cases-head p { font-size: 16px; color: var(--text-dark-m); max-width: 580px; margin: 14px auto 0; line-height: 1.6; }
+    .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .case-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 22px;
+      align-items: flex-start;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 20px 40px -28px rgba(26,18,24,0.16);
+      position: relative; overflow: hidden;
+    }
+    .case-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 24px; right: 24px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--amber), var(--gold), transparent);
+      opacity: 0.6;
+    }
+    .case-card:hover { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 30px 60px -28px rgba(212,168,44,0.35); }
+    .case-thumb {
+      position: relative;
+      aspect-ratio: 9/16;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--ink);
+      display: block;
+    }
+    .case-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+    .case-card:hover .case-thumb img { transform: scale(1.04); }
+    .case-thumb::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+      pointer-events: none;
+    }
+    .case-play {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-dark);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      z-index: 1;
+      transition: transform .25s var(--ease), background .25s var(--ease);
+    }
+    .case-card:hover .case-play { background: var(--gold); transform: translate(-50%, -50%) scale(1.08); }
+    .case-content { display: flex; flex-direction: column; height: 100%; }
+    .case-vertical {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gold-dark); font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .case-vertical::before {
+      content: ''; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--gold);
+    }
+    .case-quote {
+      font-size: 15px; line-height: 1.55; color: var(--text-dark);
+      margin-bottom: 18px; font-weight: 500;
+      letter-spacing: -0.005em;
+      flex: 1;
+    }
+    .case-author {
+      padding-top: 14px; border-top: 1px solid rgba(11,4,8,0.08);
+      font-size: 12px; color: var(--text-dark-m); line-height: 1.5;
+    }
+    .case-author strong { display: block; color: var(--text-dark); font-weight: 600; font-size: 14px; margin-bottom: 3px; letter-spacing: -0.01em; }
+    .case-watch {
+      margin-top: 12px;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600;
+      color: var(--gold-dark);
+      letter-spacing: 0.3px;
+      transition: color .2s, gap .2s;
+    }
+    .case-card:hover .case-watch { color: var(--amber); gap: 9px; }
+
     /* ============ CTA BANNER ============ */
     .cta-banner { background: var(--black); padding: 80px 32px; }
     .cta-banner-i {
@@ -715,7 +812,9 @@
       .hero-cta-row .btn-gold, .hero-cta-row .btn-ghost-dark { flex: 1; justify-content: center; }
       .verticals { padding: 36px 20px; }
       .verticals-row { gap: 22px; }
-      .features, .ic-deep, .howit, .quantified, .cta-banner, .faq, .benefits, .cta-final { padding: 64px 20px; }
+      .features, .ic-deep, .howit, .quantified, .cases, .cta-banner, .faq, .benefits, .cta-final { padding: 64px 20px; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .case-card { grid-template-columns: 110px 1fr; gap: 16px; padding: 18px; }
       .feature-grid { grid-template-columns: 1fr; }
       .ic-grid { grid-template-columns: 1fr 1fr; }
       .howit-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -747,6 +846,7 @@
         <a href="#metodo">Método SVI</a>
         <a href="#inteligencia">Inteligência Comercial</a>
         <a href="#operacao">Operação</a>
+        <a href="#cases">Depoimentos</a>
         <a href="#faq">Perguntas</a>
       </div>
       <div class="nav-actions">
@@ -1023,6 +1123,101 @@
     </div>
   </section>
 
+  <!-- CASES -->
+  <section class="cases reveal" id="cases">
+    <div class="cases-i">
+      <div class="cases-head">
+        <div class="pill-eyebrow">Depoimentos</div>
+        <h2>Quatro clientes.<br>Quatro contextos. <em>Mesmo método.</em></h2>
+        <p>Quem opera com a SVI fala por nós. Cada depoimento abaixo foi gravado pelos próprios clientes, em data e contexto reais.</p>
+      </div>
+
+      <div class="cases-grid">
+
+        <article class="case-card">
+          <a href="https://www.instagram.com/p/DVMrB0FjdnW/" target="_blank" rel="noopener" class="case-thumb" aria-label="Ver depoimento do Dr. Daniel Peralba no Instagram">
+            <img src="images/case-daniel.jpg" alt="Dr. Daniel Peralba, cirurgião proctologista, gravando depoimento sobre a SVI" loading="lazy">
+            <span class="case-play" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </a>
+          <div class="case-content">
+            <span class="case-vertical">Saúde · Cirurgia</span>
+            <p class="case-quote">"Em janeiro e fevereiro já bati o recorde do ano passado inteiro, quando eu tava sozinho."</p>
+            <div class="case-author">
+              <strong>Dr. Daniel Peralba</strong>
+              Médico cirurgião · Proctologia<br>Redenção, PA
+            </div>
+            <a href="https://www.instagram.com/p/DVMrB0FjdnW/" target="_blank" rel="noopener" class="case-watch">
+              Ver depoimento no Instagram →
+            </a>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <a href="https://www.instagram.com/p/DUrAdTNDl0x/" target="_blank" rel="noopener" class="case-thumb" aria-label="Ver depoimento do Dr. Brenno Cangussu no Instagram">
+            <img src="images/case-brenno.jpg" alt="Dr. Brenno Cangussu, ortopedista e médico da dor, gravando depoimento sobre a SVI" loading="lazy">
+            <span class="case-play" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </a>
+          <div class="case-content">
+            <span class="case-vertical">Saúde · Ortopedia</span>
+            <p class="case-quote">"A procura no WhatsApp já melhorou exponencialmente. Eu consigo diferenciar a minha trajetória antes e depois da SVI."</p>
+            <div class="case-author">
+              <strong>Dr. Brenno Cangussu</strong>
+              Médico ortopedista · Medicina da Dor<br>Redenção, PA
+            </div>
+            <a href="https://www.instagram.com/p/DUrAdTNDl0x/" target="_blank" rel="noopener" class="case-watch">
+              Ver depoimento no Instagram →
+            </a>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <a href="https://www.instagram.com/p/DKPRbjDRJyT/" target="_blank" rel="noopener" class="case-thumb" aria-label="Ver depoimento do Spa Nature no Instagram">
+            <img src="images/case-spanature.jpg" alt="Equipe do Spa Nature gravando depoimento sobre a inauguração com a SVI" loading="lazy">
+            <span class="case-play" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </a>
+          <div class="case-content">
+            <span class="case-vertical">Estética · Spa</span>
+            <p class="case-quote">"Recorde nacional de faturamento na inauguração e recorde de seguidores antes mesmo de inaugurar. Antes do problema chegar, eles já tinham a solução."</p>
+            <div class="case-author">
+              <strong>Spa Nature</strong>
+              Inauguração · Redenção, PA
+            </div>
+            <a href="https://www.instagram.com/p/DKPRbjDRJyT/" target="_blank" rel="noopener" class="case-watch">
+              Ver depoimento no Instagram →
+            </a>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <a href="https://www.instagram.com/p/DLpl98HNd9W/" target="_blank" rel="noopener" class="case-thumb" aria-label="Ver depoimento da Exatta Solar no Instagram">
+            <img src="images/case-exatta.jpg" alt="Suzy, da Exatta Solar, gravando depoimento sobre a SVI" loading="lazy">
+            <span class="case-play" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </a>
+          <div class="case-content">
+            <span class="case-vertical">Energia Solar</span>
+            <p class="case-quote">"Já tinha trabalhado com outras empresas que deixaram a desejar. Estava desacreditada. Vieram com uma proposta que me desafiou e realmente surpreendeu."</p>
+            <div class="case-author">
+              <strong>Suzy · Exatta Solar</strong>
+              Operação ativa há 6 meses
+            </div>
+            <a href="https://www.instagram.com/p/DLpl98HNd9W/" target="_blank" rel="noopener" class="case-watch">
+              Ver depoimento no Instagram →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BANNER -->
   <section class="cta-banner reveal">
     <div class="cta-banner-i">
@@ -1172,6 +1367,7 @@
           <a href="#metodo">Método SVI</a>
           <a href="#inteligencia">Inteligência Comercial</a>
           <a href="#operacao">Operação</a>
+          <a href="#cases">Depoimentos</a>
           <a href="#faq">Perguntas</a>
         </div>
         <div class="footer-col">
