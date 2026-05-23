@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Proposta — Baruc Pizzas | SVI Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0D0D0D;
+    --bg2: #161616;
+    --bg3: #1E1E1E;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --amber: #E8A020;
+    --amber-dim: rgba(232,160,32,0.12);
+    --amber-glow: rgba(232,160,32,0.06);
+    --text: #F0EDE8;
+    --text2: #9A9590;
+    --text3: #5A5652;
+    --green: #3D9970;
+    --green-dim: rgba(61,153,112,0.12);
+    --red: #D45A3A;
+    --red-dim: rgba(212,90,58,0.1);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 860px; margin: 0 auto; padding: 0 2rem 6rem; }
+
+  /* HEADER */
+  .header {
+    padding: 5rem 0 4rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .header-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header-tag::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--amber);
+    display: inline-block;
+  }
+  .header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+  .header h1 span { color: var(--amber); }
+  .header-sub {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 580px;
+    line-height: 1.65;
+  }
+  .header-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 0.5px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .meta-item { }
+  .meta-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px; }
+  .meta-value { font-size: 14px; color: var(--text2); }
+
+  /* SECTIONS */
+  section { padding: 4rem 0; border-bottom: 0.5px solid var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+  .section-body {
+    color: var(--text2);
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 640px;
+    margin-bottom: 2rem;
+  }
+
+  /* DIAGNOSTIC CARDS */
+  .diag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .diag-card {
+    background: var(--bg2);
+    padding: 1.5rem;
+  }
+  .diag-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .diag-desc {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  /* PAIN POINTS */
+  .pain-list { display: flex; flex-direction: column; gap: 1px; margin-top: 2rem; }
+  .pain-item {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .pain-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--red-dim);
+    border: 0.5px solid rgba(212,90,58,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    color: var(--red);
+  }
+  .pain-content h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+  .pain-content p { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+  /* SOLUTION FLOWS */
+  .flows-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 2rem; }
+  .flow-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .flow-card:hover { border-color: var(--border2); }
+  .flow-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: var(--amber-dim);
+    border: 0.5px solid rgba(232,160,32,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .flow-content h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+  .flow-content p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+  .flow-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--bg3);
+    border: 0.5px solid var(--border2);
+    color: var(--text2);
+  }
+
+  /* CHAT MOCKUP */
+  .chat-wrap {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  .chat-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--amber-dim);
+    border: 1px solid rgba(232,160,32,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .chat-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .chat-status { font-size: 11px; color: var(--green); }
+  .chat-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 12px; }
+  .msg { max-width: 78%; display: flex; flex-direction: column; gap: 3px; }
+  .msg.bot { align-self: flex-start; }
+  .msg.user { align-self: flex-end; }
+  .bubble {
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .bot .bubble {
+    background: var(--bg3);
+    border: 0.5px solid var(--border);
+    color: var(--text);
+    border-bottom-left-radius: 4px;
+  }
+  .user .bubble {
+    background: var(--amber-dim);
+    border: 0.5px solid rgba(232,160,32,0.2);
+    color: var(--text);
+    border-bottom-right-radius: 4px;
+  }
+  .msg-time { font-size: 10px; color: var(--text3); padding: 0 4px; }
+  .bot .msg-time { align-self: flex-start; }
+  .user .msg-time { align-self: flex-end; }
+
+  /* TIMELINE */
+  .timeline { margin-top: 2rem; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--bg2);
+    border: 0.5px solid var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--amber);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .tl-content { padding-top: 4px; }
+  .tl-week { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px; }
+  .tl-title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+  .tl-desc { font-size: 13px; color: var(--text2); line-height: 1.6; }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 2rem;
+  }
+  @media (max-width: 560px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .price-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .price-card.featured {
+    border-color: rgba(232,160,32,0.35);
+    background: var(--amber-glow);
+  }
+  .price-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--amber);
+    color: #000;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .price-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+  .price-amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-amount span { font-size: 1rem; font-weight: 400; color: var(--text2); }
+  .price-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-top: 10px; }
+
+  /* REFERENCE PRICE */
+  .ref-price-block {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .ref-left p { font-size: 13px; color: var(--text2); }
+  .ref-left strong { color: var(--text); }
+  .ref-price {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .ref-market {
+    font-size: 13px;
+    color: var(--text3);
+    text-decoration: line-through;
+  }
+  .ref-svi {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1.1;
+  }
+
+  /* INCLUDES */
+  .includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+  .include-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 1rem;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+  }
+  .check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--green-dim);
+    border: 0.5px solid rgba(61,153,112,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .check svg { width: 10px; height: 10px; stroke: var(--green); stroke-width: 2.5; fill: none; }
+  .include-text { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+  /* CTA */
+  .cta-block {
+    text-align: center;
+    padding: 5rem 0;
+    border-top: 0.5px solid var(--border);
+    margin-top: 2rem;
+  }
+  .cta-block h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+  .cta-block p { color: var(--text2); font-size: 15px; margin-bottom: 2rem; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--amber);
+    color: #000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.5px solid var(--border);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text3); letter-spacing: 0.08em; text-transform: uppercase; }
+  .footer-info { font-size: 12px; color: var(--text3); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-tag">Proposta Comercial · SVI Company</div>
+    <h1>Agente de IA<br>para a <span>Baruc Pizzas</span></h1>
+    <p class="header-sub">Um atendente inteligente no WhatsApp que conversa como humano, guia o pedido do início ao fim e recupera clientes automaticamente — 24 horas por dia.</p>
+    <div class="header-meta">
+      <div class="meta-item">
+        <div class="meta-label">Preparado para</div>
+        <div class="meta-value">Baruc Pizzas</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Data</div>
+        <div class="meta-value">Maio de 2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Responsável</div>
+        <div class="meta-value">João Falcão · SVI Company</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Entrega estimada</div>
+        <div class="meta-value">21 dias</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DIAGNÓSTICO -->
+  <section>
+    <div class="section-label">Diagnóstico</div>
+    <h2 class="section-title">O que identificamos na operação de vocês</h2>
+    <p class="section-body">Com base nas respostas do formulário de diagnóstico, mapeamos a operação atual e os principais pontos de perda de venda.</p>
+
+    <div class="diag-grid">
+      <div class="diag-card">
+        <div class="diag-number">50</div>
+        <div class="diag-desc">pedidos/dia nos dias úteis</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-number">200</div>
+        <div class="diag-desc">pedidos só no fim de semana</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-number">1</div>
+        <div class="diag-desc">número de WhatsApp para tudo isso</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-number">4+</div>
+        <div class="diag-desc">canais simultâneos (WhatsApp, iFood, telefone, balcão)</div>
+      </div>
+    </div>
+
+    <div class="pain-list" style="margin-top: 1.5rem;">
+      <div class="pain-item">
+        <div class="pain-icon">✕</div>
+        <div class="pain-content">
+          <h4>Bot atual é robótico e repetitivo</h4>
+          <p>O sistema atual envia menus numéricos e repete perguntas desnecessárias. O cliente perde a paciência e abandona o pedido antes de finalizar.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">✕</div>
+        <div class="pain-content">
+          <h4>Sabores esgotados travam o pedido</h4>
+          <p>Quando um sabor é retirado do sistema, o cliente fica sem conseguir concluir o pedido — sem explicação, sem alternativa. Venda perdida.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">✕</div>
+        <div class="pain-content">
+          <h4>Clientes somem sem retornar</h4>
+          <p>Não existe nenhum mecanismo de reativação. Clientes que pararam de pedir somem sem nenhuma abordagem automática de recuperação.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">✕</div>
+        <div class="pain-content">
+          <h4>Nenhuma pesquisa pós-entrega</h4>
+          <p>Sem feedback sistemático, problemas de qualidade e entrega não são capturados. A percepção do cliente fica invisível para a gestão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section>
+    <div class="section-label">A Solução</div>
+    <h2 class="section-title">Um agente que conversa, vende e fideliza</h2>
+    <p class="section-body">Construímos um agente de inteligência artificial integrado ao seu WhatsApp existente. Ele entende mensagens em linguagem natural — não precisa de menu numérico — e guia o cliente passo a passo até o pedido impresso na sua cozinha.</p>
+
+    <div class="flows-grid">
+      <div class="flow-card">
+        <div class="flow-num">01</div>
+        <div class="flow-content">
+          <h3>Pedido completo — passo a passo guiado</h3>
+          <p>O agente conduz o cliente: tamanho → quantidade de sabores → sabores disponíveis → borda → bebida → endereço → forma de pagamento → confirmação → envio automático para sua impressora térmica.</p>
+          <div class="flow-tags">
+            <span class="tag">Linguagem natural</span>
+            <span class="tag">Impressão automática</span>
+            <span class="tag">Cardápio dinâmico</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">02</div>
+        <div class="flow-content">
+          <h3>Dúvidas — respostas instantâneas</h3>
+          <p>Horário de funcionamento, área de entrega, tempo estimado, formas de pagamento aceitas, ingredientes de cada sabor. O agente responde tudo sem depender de atendente humano.</p>
+          <div class="flow-tags">
+            <span class="tag">24/7</span>
+            <span class="tag">Sem atendente humano</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">03</div>
+        <div class="flow-content">
+          <h3>Sabores esgotados — atualização em tempo real</h3>
+          <p>Você avisa pelo WhatsApp (ou painel) quais sabores acabaram. O agente remove automaticamente da lista — o cliente nunca vê um sabor indisponível e não trava no pedido.</p>
+          <div class="flow-tags">
+            <span class="tag">Atualização instantânea</span>
+            <span class="tag">Sem pedido travado</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">04</div>
+        <div class="flow-content">
+          <h3>Pesquisa pós-entrega — feedback automático</h3>
+          <p>Entre 40 a 60 minutos após o pedido confirmado, o agente dispara uma mensagem perguntando sobre a experiência. As respostas são registradas para acompanhamento.</p>
+          <div class="flow-tags">
+            <span class="tag">Disparo automático</span>
+            <span class="tag">Registro de feedback</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num">05</div>
+        <div class="flow-content">
+          <h3>Reativação de clientes sumidos</h3>
+          <p>Clientes que não pedem há X dias recebem uma mensagem personalizada com uma oferta ou lembrete. Recupera venda que seria perdida sem nenhuma ação manual da sua parte.</p>
+          <div class="flow-tags">
+            <span class="tag">Automático</span>
+            <span class="tag">Personalizado</span>
+            <span class="tag">Sem custo de anúncio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULAÇÃO DO AGENTE -->
+  <section>
+    <div class="section-label">Como funciona na prática</div>
+    <h2 class="section-title">Uma conversa real com o agente</h2>
+    <p class="section-body">É isso que o seu cliente vai ver no WhatsApp. Sem menu numérico, sem travamento, sem robô óbvio.</p>
+
+    <div class="chat-wrap">
+      <div class="chat-header">
+        <div class="chat-avatar">🍕</div>
+        <div>
+          <div class="chat-name">Baruc Pizzas</div>
+          <div class="chat-status">● online agora</div>
+        </div>
+      </div>
+      <div class="chat-body">
+        <div class="msg user">
+          <div class="bubble">Oi, boa noite! Quero pedir uma pizza</div>
+          <div class="msg-time">19:42</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Boa noite! 🍕 Seja bem-vindo à Baruc Pizzas! Fico feliz em te atender.<br><br>Vamos montar sua pizza? Qual tamanho você prefere?<br>• <strong>Grande</strong> (8 fatias)<br>• <strong>Família</strong> (12 fatias)</div>
+          <div class="msg-time">19:42</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">Grande</div>
+          <div class="msg-time">19:43</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Ótima escolha! 👍 Na pizza grande você pode escolher até <strong>2 sabores</strong>.<br><br>Quantos sabores você quer hoje? 1 ou 2?</div>
+          <div class="msg-time">19:43</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">2 sabores, frango com catupiry e portuguesa</div>
+          <div class="msg-time">19:43</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Anotei! Meia <strong>Frango com Catupiry</strong> e meia <strong>Portuguesa</strong> 🔥<br><br>Qual borda você prefere?<br>• <strong>Sem borda</strong><br>• <strong>Cheddar</strong> (+R$5)<br>• <strong>Catupiry</strong> (+R$5)</div>
+          <div class="msg-time">19:44</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">Catupiry</div>
+          <div class="msg-time">19:44</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Perfeito! Vou adicionar a borda de catupiry. 🧀<br><br>Vai querer adicionar alguma bebida? Temos Coca-Cola, Guaraná Antarctica e água.</div>
+          <div class="msg-time">19:44</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">Coca 2L</div>
+          <div class="msg-time">19:45</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Anotado! Qual o endereço de entrega?</div>
+          <div class="msg-time">19:45</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">Rua das Flores 342, bairro Centro</div>
+          <div class="msg-time">19:46</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Entregamos no Centro sim! ✅<br><br>Resumo do seu pedido:<br>🍕 Pizza Grande — Frango c/ Catupiry + Portuguesa<br>🧀 Borda Catupiry<br>🥤 Coca-Cola 2L<br>📍 Rua das Flores 342, Centro<br><br><strong>Total: R$62,00</strong><br><br>Pagamento na entrega (Pix, cartão ou dinheiro). Tudo certo?</div>
+          <div class="msg-time">19:46</div>
+        </div>
+        <div class="msg user">
+          <div class="bubble">Sim, confirma!</div>
+          <div class="msg-time">19:46</div>
+        </div>
+        <div class="msg bot">
+          <div class="bubble">Pedido confirmado! 🎉 Tempo estimado de entrega: 40 a 50 minutos. Qualquer dúvida é só chamar aqui!</div>
+          <div class="msg-time">19:46</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRONOGRAMA -->
+  <section>
+    <div class="section-label">Cronograma</div>
+    <h2 class="section-title">Entrega em 21 dias</h2>
+    <p class="section-body">Do início do projeto ao agente funcionando no seu WhatsApp, em três semanas.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">1</div>
+        <div class="tl-content">
+          <div class="tl-week">Semana 1</div>
+          <div class="tl-title">Setup e cardápio</div>
+          <div class="tl-desc">Configuração da infraestrutura técnica, cadastro completo do cardápio (sabores, tamanhos, bordas, bebidas, preços) e definição da área de entrega por bairro.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">2</div>
+        <div class="tl-content">
+          <div class="tl-week">Semana 2</div>
+          <div class="tl-title">Desenvolvimento dos 5 fluxos</div>
+          <div class="tl-desc">Construção do agente conversacional, fluxo de pedido completo, módulo de dúvidas, controle de sabores esgotados, pesquisa pós-entrega e reativação de clientes. Testes internos.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">3</div>
+        <div class="tl-content">
+          <div class="tl-week">Semana 3</div>
+          <div class="tl-title">Testes reais + go live</div>
+          <div class="tl-desc">Testes ao vivo com situações reais (sabores esgotados, endereços fora da área, pedidos complexos). Ajustes finos baseados no feedback. Ativação definitiva no seu número de WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE ESTÁ INCLUÍDO -->
+  <section>
+    <div class="section-label">Entregáveis</div>
+    <h2 class="section-title">O que está incluído</h2>
+    <div class="includes-grid">
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Agente IA conversacional no seu WhatsApp</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">5 fluxos configurados e testados</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Integração com impressora térmica existente</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Cardápio dinâmico — você atualiza pelo celular</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Controle de sabores esgotados em tempo real</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Pesquisa pós-entrega automática</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">Reativação automática de clientes inativos</div>
+      </div>
+      <div class="include-item">
+        <div class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+        <div class="include-text">30 dias de suporte técnico pós-entrega</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section>
+    <div class="section-label">Investimento</div>
+    <h2 class="section-title">Condições especiais de lançamento</h2>
+    <p class="section-body">Este projeto tem valor de mercado de R$12.000. Para fechar agora, oferecemos condições especiais.</p>
+
+    <div class="ref-price-block">
+      <div class="ref-left">
+        <p><strong>Projeto completo:</strong> agente IA + 5 fluxos + integração impressora + 30 dias de suporte</p>
+        <p style="margin-top:4px;">Valor de referência de mercado: <span style="text-decoration: line-through; color: var(--text3);">R$12.000</span></p>
+      </div>
+      <div class="ref-price">
+        <div class="ref-svi">R$ 5.000</div>
+        <div style="font-size:12px; color: var(--text3); margin-top:2px;">pagamento único ou parcelado</div>
+      </div>
+    </div>
+
+    <div class="pricing-grid" style="grid-template-columns: 1fr;">
+      <div class="price-card featured">
+        <div class="price-badge">Condição especial</div>
+        <div class="price-label">Parcelamento mensal</div>
+        <div class="price-amount">R$1.000 <span>/ mês × 5</span></div>
+        <div class="price-desc">5 parcelas mensais de R$1.000. Primeira parcela na assinatura do contrato, demais no mesmo dia dos meses seguintes. Total: R$5.000 (vs R$12.000 valor de mercado).</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <div class="section-label">Custos operacionais mensais</div>
+      <p class="section-body" style="margin-bottom: 1.5rem;">Além do valor do projeto, o agente tem um custo mensal de operação. Transparência total sobre o que você vai pagar para manter o sistema no ar.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden;">
+        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">API de inteligência artificial</div>
+            <div style="font-size: 12px; color: var(--text2);">Motor de linguagem que faz o agente entender e responder naturalmente</div>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--amber);">~R$15–20/mês</div>
+            <div style="font-size: 11px; color: var(--text3);">estimativa para seu volume atual</div>
+          </div>
+        </div>
+        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">Servidor (VPS)</div>
+            <div style="font-size: 12px; color: var(--text2);">Infraestrutura onde o agente roda — utilizamos o servidor da SVI no início</div>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--green);">R$0/mês</div>
+            <div style="font-size: 11px; color: var(--text3);">incluso — se volume crescer, migramos</div>
+          </div>
+        </div>
+        <div style="background: var(--bg2); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px;">WhatsApp, automações, cardápio</div>
+            <div style="font-size: 12px; color: var(--text2);">Conexão WhatsApp, fluxos N8N, memória de conversa, planilha de cardápio</div>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--green);">R$0/mês</div>
+            <div style="font-size: 11px; color: var(--text3);">tudo self-hosted no servidor</div>
+          </div>
+        </div>
+        <div style="background: var(--bg3); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; border-top: 0.5px solid var(--border2);">
+          <div style="font-size: 14px; font-weight: 500; color: var(--text);">Total estimado para manter o agente no ar</div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <div style="font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--amber);">~R$15–20/mês</div>
+            <div style="font-size: 11px; color: var(--text3);">menos que uma pizza por semana</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: var(--bg2); border: 0.5px solid var(--border); border-radius: 10px;">
+        <div style="font-size: 12px; color: var(--text2); line-height: 1.6;">
+          <strong style="color: var(--text);">Nota:</strong> Se o volume de pedidos crescer significativamente (acima de 5.000/mês), o custo da API pode chegar a R$30–50/mês. Acompanhamos juntos e avisamos antes de qualquer mudança relevante. Servidor próprio (caso necessário) custa entre R$50–80/mês na Hostinger.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>Pronto para ter um atendente<br>que nunca dorme?</h2>
+    <p>Aprovando essa proposta, começamos na semana que vem.</p>
+    <a class="cta-btn" href="https://wa.me/5594991049987">Quero fechar agora</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">SVI Company</div>
+    <div class="footer-info">João Falcão · Redenção, PA · contato@svi.company</div>
+  </footer>
+
+</div>
+</body>
+</html>
