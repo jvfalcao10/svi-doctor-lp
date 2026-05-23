@@ -646,6 +646,108 @@
     }
     .case-card:hover .case-watch { color: var(--amber); gap: 9px; }
 
+    /* ============ FOUNDER ============ */
+    .founder {
+      background: linear-gradient(180deg, var(--black) 0%, var(--ink) 100%);
+      padding: 110px 32px;
+      position: relative; overflow: hidden;
+    }
+    .founder::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(700px 400px at 20% 30%, rgba(232,154,28,0.10), transparent 60%),
+        radial-gradient(600px 400px at 90% 80%, rgba(212,168,44,0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .founder-i {
+      max-width: 980px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 56px;
+      align-items: center;
+      position: relative; z-index: 2;
+    }
+    .founder-photo {
+      aspect-ratio: 4/5;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(165deg, var(--ink-2), var(--ink-3));
+      box-shadow: 0 40px 100px -30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(240,199,68,0.08);
+      border: 1px solid rgba(212,168,44,0.15);
+    }
+    .founder-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .founder-photo--placeholder {
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 130px; font-weight: 600;
+      letter-spacing: -0.04em;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(240,199,68,0.18), transparent 60%),
+        linear-gradient(135deg, var(--ink-2), var(--ink-3));
+      color: var(--gold-bright);
+      text-shadow: 0 4px 24px rgba(212,168,44,0.4);
+    }
+    .founder-photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 70%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none;
+    }
+    .founder-photo-tag {
+      position: absolute; bottom: 18px; left: 18px;
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--text); opacity: 0.9;
+      z-index: 2;
+      padding: 6px 12px; border-radius: 999px;
+      background: rgba(10,6,8,0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(245,241,232,0.1);
+    }
+    .founder-content .pill-eyebrow {
+      background: rgba(245,241,232,0.06);
+      color: var(--gold-bright);
+      border-color: rgba(245,241,232,0.1);
+    }
+    .founder-content h2 {
+      font-size: clamp(32px, 3.8vw, 48px);
+      line-height: 1.05; letter-spacing: -0.025em;
+      font-weight: 500; color: var(--text);
+      margin: 14px 0 22px;
+    }
+    .founder-content h2 em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--gold-light) 0%, var(--gold-bright) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .founder-content p {
+      font-size: 16px; color: var(--text-2);
+      line-height: 1.75; margin-bottom: 14px;
+    }
+    .founder-content p strong { color: var(--text); font-weight: 500; }
+    .founder-sig {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap;
+    }
+    .founder-sig-text { font-size: 14px; color: var(--text-m); line-height: 1.5; }
+    .founder-sig-text strong {
+      display: block; font-size: 16px; font-weight: 600;
+      color: var(--gold-bright); margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    .founder-actions { display: flex; gap: 10px; }
+    .founder-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(245,241,232,0.05);
+      border: 1px solid rgba(245,241,232,0.1);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--text-m); transition: all .25s;
+    }
+    .founder-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); transform: translateY(-2px); }
+
     /* ============ CTA BANNER ============ */
     .cta-banner { background: var(--black); padding: 80px 32px; }
     .cta-banner-i {
@@ -812,7 +914,10 @@
       .hero-cta-row .btn-gold, .hero-cta-row .btn-ghost-dark { flex: 1; justify-content: center; }
       .verticals { padding: 36px 20px; }
       .verticals-row { gap: 22px; }
-      .features, .ic-deep, .howit, .quantified, .cases, .cta-banner, .faq, .benefits, .cta-final { padding: 64px 20px; }
+      .features, .ic-deep, .howit, .quantified, .cases, .founder, .cta-banner, .faq, .benefits, .cta-final { padding: 64px 20px; }
+      .founder-i { grid-template-columns: 1fr; gap: 32px; max-width: 480px; }
+      .founder-photo { max-width: 320px; margin: 0 auto; }
+      .founder-photo--placeholder { font-size: 90px; }
       .cases-grid { grid-template-columns: 1fr; }
       .case-card { grid-template-columns: 110px 1fr; gap: 16px; padding: 18px; }
       .feature-grid { grid-template-columns: 1fr; }
@@ -845,8 +950,8 @@
       <div class="nav-links">
         <a href="#metodo">Método SVI</a>
         <a href="#inteligencia">Inteligência Comercial</a>
-        <a href="#operacao">Operação</a>
         <a href="#cases">Depoimentos</a>
+        <a href="#fundador">Quem opera</a>
         <a href="#faq">Perguntas</a>
       </div>
       <div class="nav-actions">
@@ -1218,6 +1323,38 @@
     </div>
   </section>
 
+  <!-- FOUNDER -->
+  <section class="founder reveal" id="fundador">
+    <div class="founder-i">
+      <div class="founder-photo founder-photo--placeholder" aria-label="João Falcão, fundador da SVI Company">
+        JF
+        <span class="founder-photo-tag">Redenção, PA</span>
+      </div>
+
+      <div class="founder-content">
+        <div class="pill-eyebrow">Quem opera</div>
+        <h2>A SVI tem um nome.<br><em>João Falcão.</em></h2>
+        <p>Construí a SVI porque me cansei de ver dono de negócio sério sendo entregue a freelancer que só sabia rodar anúncio. Operação ficava de fora do contrato. Atendimento, follow-up, processo de venda, tudo "responsabilidade do cliente". Era marketing sem comércio, criativo sem sistema.</p>
+        <p>A SVI nasceu pra ser o oposto. Não entregamos só a primeira metade do funil. Entregamos o que vem <strong>depois do clique</strong>. Por isso o nome é Sistema de Vendas Inteligente. Por isso o método tem cinco camadas que não funcionam separadas. Por isso o ritmo é o máximo de operações que conseguimos manter com profundidade, não o que cabe na agenda comercial.</p>
+        <p>Se o que você leu até aqui faz sentido, conversa direto comigo. O diagnóstico você marca no WhatsApp logo abaixo. Quem responde sou eu.</p>
+        <div class="founder-sig">
+          <div class="founder-sig-text">
+            <strong>João Falcão</strong>
+            Fundador · SVI Company
+          </div>
+          <div class="founder-actions">
+            <a href="https://wa.me/5594992404033" class="founder-btn" aria-label="WhatsApp direto com João" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m4.52 12c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.31-.02-.48-.02-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/joaofalcao" class="founder-btn" aria-label="Instagram de João Falcão" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BANNER -->
   <section class="cta-banner reveal">
     <div class="cta-banner-i">
@@ -1368,6 +1505,7 @@
           <a href="#inteligencia">Inteligência Comercial</a>
           <a href="#operacao">Operação</a>
           <a href="#cases">Depoimentos</a>
+          <a href="#fundador">Quem opera</a>
           <a href="#faq">Perguntas</a>
         </div>
         <div class="footer-col">
