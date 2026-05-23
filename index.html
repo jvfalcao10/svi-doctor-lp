@@ -843,6 +843,72 @@
     .benefit-card h3 { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 10px; letter-spacing: -0.015em; }
     .benefit-card p { font-size: 14px; color: var(--text-m); line-height: 1.6; }
 
+    /* ============ FILTER (pra quem NÃO é) ============ */
+    .filter {
+      background: var(--paper);
+      color: var(--text-dark);
+      padding: 100px 32px;
+      position: relative;
+    }
+    .filter-i { max-width: var(--max); margin: 0 auto; }
+    .filter-head { text-align: center; margin-bottom: 48px; }
+    .filter-head h2 {
+      font-size: clamp(34px, 4.2vw, 56px);
+      color: var(--text-dark); line-height: 1.05;
+      letter-spacing: -0.025em; font-weight: 500;
+      max-width: 720px; margin: 16px auto 14px;
+    }
+    .filter-head h2 em {
+      font-style: normal;
+      background: linear-gradient(110deg, var(--copper) 0%, var(--gold-dark) 70%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .filter-head p { font-size: 16px; color: var(--text-dark-m); max-width: 620px; margin: 0 auto; line-height: 1.65; }
+
+    .filter-list {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .filter-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 26px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 16px 32px -28px rgba(26,18,24,0.14);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .filter-item:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(26,18,24,0.04), 0 24px 48px -28px rgba(184,115,51,0.25); }
+    .filter-ico {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(184,115,51,0.1);
+      border: 1px solid rgba(184,115,51,0.2);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--copper);
+      flex-shrink: 0;
+    }
+    .filter-content h3 { font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; letter-spacing: -0.01em; line-height: 1.3; }
+    .filter-content p { font-size: 13px; color: var(--text-dark-m); line-height: 1.55; }
+
+    .filter-flip {
+      margin-top: 40px;
+      padding: 32px 36px;
+      background: linear-gradient(135deg, #fff 0%, var(--paper-2) 100%);
+      border: 1px solid rgba(212,168,44,0.3);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 28px; flex-wrap: wrap;
+      box-shadow: 0 20px 50px -24px rgba(212,168,44,0.25);
+    }
+    .filter-flip-text {
+      font-size: 17px; line-height: 1.5;
+      color: var(--text-dark); font-weight: 500;
+      letter-spacing: -0.01em;
+      flex: 1; min-width: 260px;
+    }
+    .filter-flip-text strong { color: var(--gold-dark); font-weight: 600; }
+
     /* ============ CTA FINAL ============ */
     .cta-final {
       background: var(--black);
@@ -914,7 +980,9 @@
       .hero-cta-row .btn-gold, .hero-cta-row .btn-ghost-dark { flex: 1; justify-content: center; }
       .verticals { padding: 36px 20px; }
       .verticals-row { gap: 22px; }
-      .features, .ic-deep, .howit, .quantified, .cases, .founder, .cta-banner, .faq, .benefits, .cta-final { padding: 64px 20px; }
+      .features, .ic-deep, .howit, .quantified, .cases, .founder, .cta-banner, .faq, .benefits, .filter, .cta-final { padding: 64px 20px; }
+      .filter-list { grid-template-columns: 1fr; }
+      .filter-flip { flex-direction: column; align-items: flex-start; padding: 24px 24px; text-align: left; }
       .founder-i { grid-template-columns: 1fr; gap: 32px; max-width: 480px; }
       .founder-photo { max-width: 320px; margin: 0 auto; }
       .founder-photo--placeholder { font-size: 90px; }
@@ -1326,8 +1394,8 @@
   <!-- FOUNDER -->
   <section class="founder reveal" id="fundador">
     <div class="founder-i">
-      <div class="founder-photo founder-photo--placeholder" aria-label="João Falcão, fundador da SVI Company">
-        JF
+      <div class="founder-photo" aria-label="João Falcão, fundador da SVI Company">
+        <img src="images/founder-joao.jpg" alt="João Falcão, fundador da SVI Company" loading="lazy">
         <span class="founder-photo-tag">Redenção, PA</span>
       </div>
 
@@ -1351,6 +1419,71 @@
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER (pra quem NÃO é a SVI) -->
+  <section class="filter reveal" id="filtro">
+    <div class="filter-i">
+      <div class="filter-head">
+        <div class="pill-eyebrow">Honestidade antes de tudo</div>
+        <h2>Pra quem a SVI<br><em>não é.</em></h2>
+        <p>Vale mais dizer agora do que vender errado depois. Se você se enquadra em algum desses pontos, agradecemos o tempo e indicamos outro caminho.</p>
+      </div>
+
+      <div class="filter-list">
+        <div class="filter-item">
+          <div class="filter-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <div class="filter-content">
+            <h3>Negócio que ainda não vende</h3>
+            <p>Operamos negócios com receita rodando. Quem ainda está validando produto ou buscando o primeiro cliente precisa de outra estrutura, não de marketing 360.</p>
+          </div>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <div class="filter-content">
+            <h3>Quem quer só "rodar tráfego"</h3>
+            <p>Se a expectativa é contratar gestor de mídia avulso, não somos o caminho. O nosso trabalho começa antes do anúncio e continua muito depois.</p>
+          </div>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <div class="filter-content">
+            <h3>Quem espera milagre em 30 dias</h3>
+            <p>Resultado sério leva entre 60 e 120 dias pra amadurecer. Quem promete antes disso está vendendo expectativa, não trabalho. Não somos esses.</p>
+          </div>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <div class="filter-content">
+            <h3>Quem não quer tocar no próprio time</h3>
+            <p>O método mexe em atendimento, follow-up e processo comercial. Se o time interno está fechado pra ajustes, não temos como entregar o que prometemos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-flip">
+        <div class="filter-flip-text">
+          Se <strong>nada disso é você</strong>, então é provável que faça sentido conversar. O diagnóstico é gratuito e dura cerca de trinta minutos.
+        </div>
+        <a href="https://wa.me/5594992404033?text=Quero%20agendar%20um%20diagn%C3%B3stico%20com%20a%20SVI" class="btn-gold" target="_blank" rel="noopener">
+          Solicitar diagnóstico
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
       </div>
     </div>
   </section>
